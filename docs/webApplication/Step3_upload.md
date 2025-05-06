@@ -8,7 +8,7 @@ parent: Notebook 2 – Web Application
 
 Now that we've deployed a basic web application, the next step is to configure it to provide the required functionality.
   
-Let's start with a high-level overview of the setup. Then , we will go through the specifics of configuring the pre-implemented Bottle application on pythonanywhere. 
+Let's start with a high-level overview of the setup provided within this tutorial. Then , we will go through the specifics of configuring the pre-implemented Bottle application on pythonanywhere. 
  
 ## Overview
 We need the web application to respond to the following requests made by our Unity experiments (also see Notebook 1):
@@ -21,7 +21,8 @@ We need the web application to respond to the following requests made by our Uni
 ![](../../assets/images/bottle_app.png)
 
 
-**GET endpoint**
+**GET endpoint**  
+
 The GET method is used to retrieve data on a server. In our case, we are using it to retrieve a subject number as well as a confirmation that the connection is established. To enable this, our Bottle application includes a get endpoint. 
 
 Following a GET request from the testConnection() in our Unity experiment, the web application first retrieves (and increments) a subject number (also see get_next_id() fuction in bottle_app.py script). Then, this subject number is returned within a response message that is returned to testConnection(). 
@@ -63,7 +64,7 @@ def save_data():
     """
     content = request.body.read()
     
-    # Extract the first 41 bytes as the filenm (assuming UTF-8 encoding)
+    # Extract the filename (assuming UTF-8 encoding)
     filename = content[:filename_length].decode('UTF-8')
     
     # Define the file path for saving data
