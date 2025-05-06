@@ -1,3 +1,8 @@
+---
+title: Set up web application
+nav_order: 3
+---
+
 # 2. Set up web application
 
 Authors:   
