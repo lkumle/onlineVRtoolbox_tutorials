@@ -1,6 +1,7 @@
 ---
 title: Encryption and Decryption of Data
 nav_order: 4
+layout: default
 ---
 
 # 3. Encryption and Decryption of Data

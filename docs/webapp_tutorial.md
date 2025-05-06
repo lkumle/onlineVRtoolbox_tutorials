@@ -1,6 +1,7 @@
 ---
 title: Set up web application
 nav_order: 3
+layout: default
 ---
 
 # 2. Set up web application

@@ -1,6 +1,7 @@
 ---
 title: Unity: Implement data transfer
 nav_order: 2
+layout: default
 ---
 
 # 1. Implementing data transfer functionality in Unity project
