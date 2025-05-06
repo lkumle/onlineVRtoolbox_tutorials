@@ -8,9 +8,6 @@ layout: default
 {: .no_toc }
 
 
----
----
-
 ## Overview
 {: .no_toc }
 

@@ -1,7 +1,7 @@
 ---
 title: Step 1 - Create Account 
-parent: Notebook 2 – Web Application
 layout: default
+parent: Notebook 2 – Web Application
 ---
 
 
@@ -21,5 +21,7 @@ If you are in the EU, you will additionally be prompted to decide whteher you wa
 > The free beginner account provides 512 MB disk space. Depending on how large the data files are you intend on trasnferring, data should be downloaded and removed from pythonanywhere periodically during data collection. 
 
 
+  
+    
 
-[Continue](https://just-the-docs.com){: .btn }
+[Continue with next step](https://just-the-docs.com){: .btn }
