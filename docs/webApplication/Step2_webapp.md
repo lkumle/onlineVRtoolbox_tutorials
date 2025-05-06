@@ -38,9 +38,13 @@ Once the setup is complete, you will be redirected to a web app configuration pa
 ![](../../assets/images/server3.jpg)
  
 
-<div style="background-color: #FDF1D3; border-left: 6px solid #F2AA84; padding: 10px;">
-  <strong>Note:</strong> The web application will run for 3 months and then is automatically disabled. You will recieve an reminder email before the application is disabled and can renew it at any time. 
-</div>
+{: .Note: }
+> The web application will run for 3 months and then is automatically disabled.
+>
+> You will recieve an reminder email before the application is disabled and the web appliucation can be renewed for another 3 months at any time (before and after it has expired).
+
+---
+---
 
 
 [Continue with next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step3_upload.html){: .btn }
