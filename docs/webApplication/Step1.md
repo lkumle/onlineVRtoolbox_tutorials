@@ -1,6 +1,6 @@
 ---
 title: Create account on pythonanywhere.com
-parent: Utilities
+parent: Notebook 2 – Web Application
 
 ---
 
