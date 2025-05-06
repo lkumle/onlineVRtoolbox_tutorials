@@ -1,5 +1,5 @@
 ---
-title: Encryption and Decryption of Data
+title: Notebook 3 – Encryption and Decryption 
 nav_order: 4
 layout: default
 ---
