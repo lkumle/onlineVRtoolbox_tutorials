@@ -25,9 +25,11 @@ While we could run our Bottle web application on any server, using platforms suc
 - A web-based interface for easy configuration and monitoring.
 
 
-<div style="background-color: #E2F0DB; border-left: 6px solid #B5C8A8; padding: 10px;">
-  <strong>To get started:</strong> Download the matrials provided at [GitHub]https://github.com/lkumle/onlineVR-toolbox and follow the steps below!
-</div>
+{: .new-title }
+> Getting Started:
+>
+> 1. Download the matrials provided at [GitHub]https://github.com/lkumle/onlineVR-toolbox
+> 2. Follow Steps 1-4 below
 
 ---
 ---
