@@ -5,15 +5,16 @@ parent: Notebook 2 – Web Application
 ---
 
 
-## Step 4: Handling filenames in bottle_app.py
+## Step 4: Handling filenames 
 
 If you are simply recreating the provided pipeline, you have now successfully set up your web application! 
 
 Let’s quickly discuss how to handle filenames if you need to customize them for your study.
 
-By default, the filename in the provided Unity project is formatted as onlineVR_{subID}_{timestamp}, where {subID} is the assigned subject number and {timestamp} represents the time the data files was creates
-. 
-To ensure the data is stored with this same filename on PythonAnywhere, we embed the filename within the encrypted data before uploading it. This effectively makes the filename a "header" in the byte stream.
+By default, the filename in the provided Unity project is formatted as onlineVR_{subID}_{timestamp}, where {subID} is the assigned subject number and {timestamp} represents the time the data files was creates. 
+  
+  
+To ensure the data is stored with this same filename on PythonAnywhere, we can embed the filename within the encrypted data before uploading it. This effectively makes the filename a "header" in the byte stream.
 
 ---
 **How the Bottle App Processes Filenames**
@@ -23,7 +24,7 @@ When the Bottle app receives the data:
 2. It removes the filename from the byte stream.
 3. It stores the remaining encrypted data in the */files/* directory.
 
-![](../../assets/images/server6.jpg)
+![](../../assets/images/server6.png)
 
 ---
 **Specifying the Filename Length**
