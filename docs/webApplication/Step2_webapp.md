@@ -45,9 +45,7 @@ At the top, you will see your web address. You will need to use this exact URL i
 
 ---
 ---
-{: .note-title }
-> Note:
->
+{: .important}
 > The web application will run for 3 months and then is automatically disabled.
 >
 > You will recieve an reminder email before the application is disabled and the web appliucation can be renewed for another 3 months at any time (before and after it has expired).
