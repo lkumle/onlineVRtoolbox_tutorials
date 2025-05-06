@@ -32,10 +32,4 @@ While we could run our Bottle web application on any server, using platforms suc
 ---
 ---
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 
