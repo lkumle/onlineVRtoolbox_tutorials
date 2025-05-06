@@ -5,12 +5,14 @@ layout: default
 ---
 
 # Step 2: Set up web application
+{: .no_toc }
 
 
 ---
 ---
 
-## Overview: 
+## Overview
+{: .no_toc .text-delta }
 
 In this tutorial, we will walk through the process of setting up a **web application** using **Bottle** on a remote **server** with **PythonAnywhere**. This will allow us to send and receive data between a Unity experiment and a server.
 
@@ -24,8 +26,11 @@ While we could run our Bottle web application on any server, using platforms suc
 
 
 <div style="background-color: #E2F0DB; border-left: 6px solid #B5C8A8; padding: 10px;">
-  <strong>To get started:</strong> Download the matrials provided at LINK and follow the steps below!
+  <strong>To get started:</strong> Download the matrials provided at https://github.com/lkumle/onlineVR-toolbox and follow the steps below!
 </div>
+
+---
+---
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -38,7 +43,7 @@ While we could run our Bottle web application on any server, using platforms suc
 ---
 ---
 
-### 2.1	Create account on pythonanywhere.com
+## Create account on pythonanywhere.com
 
 Navigate to pythonanywhere.com and create a [free beginner account](https://www.pythonanywhere.com/pricing/) which allows to create one *web application* – exactly what we need! 
 
@@ -53,7 +58,7 @@ If you are in the EU, you will additionally be prompted to decide whteher you wa
 ---
 ---
 
-### 2.2	Create basic web application
+## Create basic web application
 
 Next, we need to create and configure a web application on PythonAnywhere. Fortunately, PythonAnywhere provides a straightforward way to deploy and manage web apps with minimal effort.
 
@@ -100,7 +105,7 @@ Once the setup is complete, you will be redirected to a web app configuration pa
 ---
 ---
 
-### 2.3	Uplaod files and configure web application
+## Uplaod files and configure web application
 
 Now that we've deployed a basic web application, the next step is to configure it to provide the required functionality. Specifically, we need the web application to:
 
@@ -146,7 +151,7 @@ Once complete, the mysite/ directory structure should look like the example abov
 ---
 ---
 
-### 2.4 Optional: Handling filenames in bottle_app.py
+### Optional: Handling filenames in bottle_app.py
 
 If you are simply recreating the provided pipeline, you have now successfully set up your web application! 
 
