@@ -37,8 +37,8 @@ In "Quickstart new Bottle project", do not modify the default path. The path sho
 
 Once the setup is complete, you will be redirected to a web app configuration page similar to the one below.
 
-- At the top, you will see your web address.
-- You will need to use this exact URL in your experiment code (see Notebook 1: Configure Unity Code).
+{: .highlight}
+At the top, you will see your web address. You will need to use this exact URL in your experiment code (see Notebook 1: Configure Unity Code).
 
 ![](../../assets/images/server3.png)
  
