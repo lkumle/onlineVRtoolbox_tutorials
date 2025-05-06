@@ -7,7 +7,7 @@ layout: default
 
 ## Step 2: Add basic web application
 
-Next, we need to create and configure a web application on PythonAnywhere. Fortunately, PythonAnywhere provides a straightforward way to deploy and manage web apps with minimal effort.
+Next, we need to add a basic web application to our account on PythonAnywhere. Fortunately, PythonAnywhere provides a straightforward way to deploy and manage web apps with minimal effort.
 
 ---
 

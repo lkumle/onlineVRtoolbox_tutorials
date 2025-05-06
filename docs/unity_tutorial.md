@@ -17,7 +17,7 @@ In this notebook, we will walk through how to implement data transfer functional
 
 For this, we created a template with the minimal required functionality. That is, connect to the server, get a subject number. Whem prompoted, upload data to the server. 
 
-In this notebook, we will go through the implementation of this minimal template. In Notebook 2, you will then create theweb aplication itslef that recieves tha data. 
+In this notebook, we will go through the implementation of this minimal template. In Notebook 2, you will then create the web aplication itslef that recieves tha data. 
 
 In the end, you will have a minimal working version of a unity project and a web server with remote data transfer functionality.  
 

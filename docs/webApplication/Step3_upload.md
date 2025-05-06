@@ -10,13 +10,17 @@ Now that we've deployed a basic web application, the next step is to configure i
 
 - Establish a connection with the Unity experiment.
 - Assign a unique subject number to each participant.
-- Receive and store data from the experiment.
+- Receive and store data from the Unity task.
 
-All of this functionality is provided in the shared bottle_app_.py script. 
+All of this functionality is provided in the shared bottle_app.py script. 
+
+[add details!!]
+
 
 Follow the steps below to configure your web application properly.
-
-**1 .Navgate to application files**
+---
+---
+**1. Navgate to application files**
 1. Navigate to the "files" tab. 
 2. Within files, navigate to *mysite/*. 
 
@@ -31,17 +35,16 @@ Inside the mysite/ directory:
 - Save and close the file.
 
 ---
-**3. Upload Supporting Files**
-Upload the provided ID.txt file to the mysite/ directory. This file keeps track of assigned subject numbers, allowing the web application to generate unique IDs for each participant.
+**3. Upload Supporting Files and Directories**  
+
+1. Upload the provided ID.txt file to the mysite/ directory (using the "Upload a file" button). 
+This file keeps track of assigned subject numbers, allowing the web application to generate unique IDs for each participant.
+2. Create a new directory named *files/* inside mysite/. 
+This is where the web application will store incoming data. 
+
 
 ![](../../assets/images/server5.png)
----
-**4. Create a Directory for Data Storage**
-To ensure the web application can store incoming experiment data:
 
-- Create a new directory named files/ inside mysite/ (see step 2 highlighted in picture above).
-
-This is where the received data will be saved.
 
 Once complete, the mysite/ directory structure should look like the example above.
 
