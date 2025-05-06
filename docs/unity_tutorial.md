@@ -1,5 +1,5 @@
 ---
-title: Unity: Implement data transfer
+title: Unity 
 nav_order: 2
 layout: default
 ---
