@@ -13,9 +13,7 @@ Next, we need to create and configure a web application on PythonAnywhere. Fortu
 1. Navigate to the "Web" tab in your PythonAnywhere dashboard.
 2. Click "+ Add a new web app" to start the setup process.
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Server/server1.png" alt="Quickstart Bottle" style="width: 80%;">
-</div>
+![](../../assets/images/server1.jpg)
 
 ---
 **Step 2: Configure the web application**
@@ -27,9 +25,7 @@ If you are using the provided bottle app script, select the following to configu
 
 Under "Quickstart new Bottle project", do not modify the default path. The path should look like the example below. (*Note:* "TutorialTemplate" is the PythonAnywhere account name used for this tutorial. In your case, it will display your own account name.)
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Server/server2.png" alt="Quickstart Bottle" style="width: 80%;">
-</div>
+![](../../assets/images/server2.jpg)
 
 ---
 **Step 3: Finalizing the Setup**
@@ -39,9 +35,7 @@ Once the setup is complete, you will be redirected to a web app configuration pa
 - At the top, you will see your web address.
 - You will need to use this exact URL in your experiment code (see Step 1: Configure Unity Code).
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Server/server3.png" alt="Quickstart Bottle" style="width: 1000%;">
-</div>
+![](../../assets/images/server3.jpg)
  
 
 <div style="background-color: #FDF1D3; border-left: 6px solid #F2AA84; padding: 10px;">
