@@ -45,7 +45,7 @@ Once the setup is complete, you will be redirected to a web app configuration pa
 
 ---
 ---
-{: .warning-title }
+{: .note-title }
 > Note:
 >
 > The web application will run for 3 months and then is automatically disabled.

@@ -10,7 +10,7 @@ Now that we've deployed a basic web application, the next step is to configure i
   
 Let's start with a high-level overview of the setup. Then , we will go through the specifics of configuring the pre-implemented Bottle application on pythonanywhere. 
  
-### Overview
+## Overview
 We need the web application to respond to the following requests made by our Unity experiments (also see Notebook 1):
 
 - Establish a connection with the Unity experiment following a GET request
@@ -44,7 +44,9 @@ def welcome():
   return response_message
 ```
 
-**PUT endpoint**
+**PUT endpoint**    
+
+
 The PUT method is used to creates a new resource (e.g., file) on the server with the content included in the request. In our case, we are using it to transfer and store the experiment data. 
 
 Following a PUT request from Upload() within our Unity experiment, our web applications first reads the content (i.e., encrypted data) included in the request, extracts the file name (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html)) and writes the retrieved data to the specified file path. 
@@ -62,10 +64,10 @@ def save_data():
     content = request.body.read()
     
     # Extract the first 41 bytes as the filenm (assuming UTF-8 encoding)
-    user_id = content[:filename_length].decode('UTF-8')
+    filename = content[:filename_length].decode('UTF-8')
     
     # Define the file path for saving data
-    file_path = f'./mysite/files/{user_id}.bytes'
+    file_path = f'./mysite/files/{filename}.bytes'
     
     # Write the remaining content to the file
     with open(file_path, 'wb') as file:
@@ -77,7 +79,8 @@ def save_data():
 
 ---
 ---
-### Configure on pythonanywhere
+## Configure on pythonanywhere
+  
 
 **1. Navgate to application files**
 1. Navigate to the "files" tab. 
