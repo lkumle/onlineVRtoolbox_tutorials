@@ -8,13 +8,16 @@ parent: Notebook 2 – Web Application
 
 Now that we've deployed a basic web application, the next step is to configure it to provide the required functionality. Specifically, we need the web application to:
 
-- Establish a connection with the Unity experiment.
-- Assign a unique subject number to each participant.
-- Receive and store data from the Unity task.
+- Establish a connection with the Unity experiment (GET request)
+  - Assign a unique subject number to each participant as part of the GET request
+- Receive and store data from the Unity task (PUT request)
 
 All of this functionality is provided in the shared bottle_app.py script. 
 
-[add details!!]
+
+
+
+
 
 
 Follow the steps below to configure your web application properly.

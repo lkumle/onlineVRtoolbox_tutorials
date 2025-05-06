@@ -53,9 +53,7 @@ In this provided template project, two scripts are important (you can find both 
 We additionally added a "basic scene" which is just a empty room. We will treat this as a stand-in for the actual experiment virtual environment.
 
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Unity_template/unity0.png" alt="Overview Unity" style="width: 60%;">
-</div>
+![](../../assets/images/unity0.png)
 
 
 **Experimenthandler.cs** defines the overall experimental logic and sequence. That is, this script handles the sequential logic of defining  blocks, trials etc. 
@@ -73,10 +71,7 @@ Then there are a few helper functions which lets us trigger these routines and e
 
 Below, we go into detail how this works. 
 
-
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Unity_template/unity1.png" alt="Overview Unity" style="width: 100%;">
-</div>
+![](../../assets/images/unity1.png)
 
 
 ---
@@ -90,10 +85,7 @@ Before participants start the experiment, we want to make sure that a connection
 To implement this, we start the experiment logic with testing the connection. That is, we display the connectionMenu and trigger the testConnection()-function. 
 
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Unity_template/unity2.png" alt="Overview Unity" style="width: 100%;">
-</div>
-
+![](../../assets/images/unity2.png)
 
 Let's have a look at what the testConnection() function is doing. Feel free to skip this part in case you are simply trying to recreate the pipeline. 
 
@@ -161,17 +153,13 @@ First, a note on storing data locally before uploading it: The Upload function l
 
 A note on filename: to make these unique on the server and avoid writing over existing files, we use the structure:
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Unity_template/unity5.png" alt="Overview Unity" style="width: 100%;">
-</div>
+![](../../assets/images/unity5.png)
 
  
 Then, we can trigger the upload routine using the UploadData() helper function. This helper function provides the filename and filepath to the connectionhandler and trigegrs the appropriaze coroutine. 
  
 
-<div style="text-align: center;">
-  <img src="/Users/levikumle/Library/CloudStorage/OneDrive-Nexus365/1_Research/ObjectSorting/onlineVR/5_tutorialResources/Unity_template/unity3.png" alt="Overview Unity" style="width: 100%;">
-</div>
+![](../../assets/images/unity3.png)
 
 
 The upload function in detail does the following: Skip if not interested. 
