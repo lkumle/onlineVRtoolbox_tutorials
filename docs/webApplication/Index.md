@@ -4,7 +4,7 @@ nav_order: 3
 layout: default
 ---
 
-# Step 2: Set up web application
+# Notebook 2: Set up web application
 {: .no_toc }
 
 
@@ -25,9 +25,10 @@ While we could run our Bottle web application on any server, using platforms suc
 {: .new-title }
 > Getting Started:
 >
-> 1. Download the matrials provided at [GitHub]https://github.com/lkumle/onlineVR-toolbox
+> 1. Download the matrials provided at [GitHub](https://github.com/lkumle/onlineVR-toolbox)
 > 2. Follow Steps 1-4 below
 
 
 
+[Continue with Step 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step1_account.html){: .btn }
 

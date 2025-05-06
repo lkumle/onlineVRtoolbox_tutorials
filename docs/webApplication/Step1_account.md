@@ -10,9 +10,14 @@ parent: Notebook 2 – Web Application
 
 Navigate to pythonanywhere.com and create a [free beginner account](https://www.pythonanywhere.com/pricing/) which allows to create one *web application* – exactly what we need! 
 
-Simply follow the steps and log-in once you have created an account. The user name you choose will later be your server address (but this will never be visible to anyone exept to you and your collaborators). 
+Simply follow the instructions on pythonanywhere and log-in once you have created an account. 
 
-**Compliance with GDPR:**
+![](../../assets/images/pythonanywhereAccount.png)
+
+The user name you choose will later be your server address (but this will never be visible to anyone exept to you and your collaborators). 
+
+**Compliance with GDPR:**  
+
 If you are in the EU, you will additionally be prompted to decide whteher you want your account and web applications to be hosted on servers in the EU or the US. According to pythonanywhere, both [comply with GDPR](https://blog.pythonanywhere.com/176/) but choosing EU hosted servers might provide additional reassurance that all parties involved in data transfer (pythonanywhere is a "data processor") are compliant with GDPR laws. 
 
 {: .note-title }
@@ -22,6 +27,7 @@ If you are in the EU, you will additionally be prompted to decide whteher you wa
 
 
   
-    
+---
+---
 
-[Continue with next step](https://just-the-docs.com){: .btn }
+[Continue with next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }

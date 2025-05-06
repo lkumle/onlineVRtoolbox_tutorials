@@ -5,7 +5,7 @@ layout: default
 ---
 
 
-## Create basic web application
+## Step 2: Add basic web application
 
 Next, we need to create and configure a web application on PythonAnywhere. Fortunately, PythonAnywhere provides a straightforward way to deploy and manage web apps with minimal effort.
 
@@ -49,3 +49,4 @@ Once the setup is complete, you will be redirected to a web app configuration pa
 </div>
 
 
+[Continue with next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step3_upload.html){: .btn }
