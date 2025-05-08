@@ -52,6 +52,8 @@ We provide preimplemented code for all steps, and we go through the steps of how
 To get started, download the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
 
 [Start with Notebook 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }
+
+
 ---
 
 {: .new-title }
@@ -70,6 +72,6 @@ Levi Kumle - levi.kumel@psy.ox.ac.uk
   
 Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
   
-AB&C Lab - abclab@psy.ox.ac.uk / https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition 
+AB&C Lab - abclab@psy.ox.ac.uk / [https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition](https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition)
 
 ![](../../assets/images/server1.png)
