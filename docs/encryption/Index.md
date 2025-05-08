@@ -16,7 +16,6 @@ In this Notebook, we will cover how to ensure data privacy during transmission a
 **Decryption** is the reverse process, where ciphertext is transformed back into its original form using the same key used for encryption.
 
 ---
----
 
 There are different encryption algorithms. In the resurces provided in the onlineVR-toolbox, we will be using **AES (Advanced Encryption Standard)**, a widely adopted symmetric encryption algorithm. Symmetric means that the same secret key is used for both encryption and decryption. Thanks to its popularity, implementations of AES are available in various programming frameworks, which makes it easy to use. 
 
@@ -26,7 +25,12 @@ To use AES encryption correctly, we need:
 
 ---
 ---
+{: .new-title }
+> Getting Started:
+>
+> This Notebook assumes that you have successfully implemented (or read) the steps outlines in Notebook 1 and 2. 
+>
+> 1. Follow Step 1 to explore how the data is encrypted within Unity using the onlineVR-toolbox.
+> 2. Follow Step 2 to learn how to decrypt any transferred data once it is downloaded from the web server. 
 
-
-We will first explore how the data is encrypted within Unity. Then, we'll go over the decryption process once the encrypted data is downloaded from the server.
 
