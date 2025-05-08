@@ -4,7 +4,7 @@ nav_order: 4
 layout: default
 ---
 
-## Notebook 3: Encryption and Decryption of Data
+# Notebook 3: Encryption and Decryption of Data
 
 In this Notebook, we will cover how to ensure data privacy during transmission and storage by using encryption.
 
