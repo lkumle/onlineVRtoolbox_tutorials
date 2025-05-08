@@ -1,7 +1,7 @@
 ---
-title: Notebook 1 – Data transfer in Unity 
-nav_order: 2
+title: Step 1 - Recieve data from web application
 layout: default
+parent: Notebook 1 – Data transfer in Unity 
 ---
 
 # 1. Implementing data transfer functionality in Unity project
