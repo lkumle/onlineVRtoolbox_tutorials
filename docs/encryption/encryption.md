@@ -47,7 +47,10 @@ Afterwards, we recommend navigating to the "Web"-tab on Pythonanywhere and click
 - The key needs to have a lengths of 16, 24 or 32 bytes
 - In our case, we specify the key as a string. The `Encrypt()` function then converts this string into a byte array using UTF-8 encoding. As such, any 16/24/32 character string using ASCII characters will result in a valid encryption key. 
 
-Note that ASCII-based AES keys that are hardcoded in the server backend (i.e., solution implemented in the onlineVR-toolbox) does not correspond the absolute highest possible security standard (i.e., if the server is compromised the key will be available and any data could potentially be decrypted). As a general note, we recommend only transferring and storing deidentified research data through the pipeline provided within the onlineVR-toolbox. Any personal or sensitive data should be collected through reseach specific platforms (e.g., Pavlovia or Quatrics). 
+{: .new-title }
+> Note on Security
+>
+> ASCII-based AES keys that are hardcoded in the server backend (i.e., solution implemented in the onlineVR-toolbox) does not correspond the absolute highest possible security standard (i.e., if the server is compromised the key will be available and any data could potentially be decrypted). As a general note, we recommend only transferring and storing deidentified research data through the pipeline provided within the onlineVR-toolbox. Any personal or sensitive data should be collected through reseach specific platforms (e.g., Pavlovia or Quatrics). 
 
 ---
 --- 
