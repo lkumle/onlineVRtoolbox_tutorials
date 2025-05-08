@@ -34,7 +34,7 @@ These Noteboks go hand-in-hand with the resources provided within the onlineVR-t
 This is a self-contained tutorial: you can replicate the minial pipeline using only the provided materials. 
   
 You don't need your own Unity task/project to follow this tutorial. The task also does not need to be uploaded on Steam (ar another gamestore) or packaged as a build. 
-In fact, we recommend to first replicate the pipleine with the resources provided here. This will make troubleshooting easier and allows you to get a sense of the involved steps. Once you have implemented a working pipeline, you can integrate the provided code and resources into your own Unity task. 
+In fact, we recommend reading through the Notebooks first, and then replicating the pipleine with the resources provided here. This will make troubleshooting easier and allows you to get a sense of the involved steps. Once you have implemented a working pipeline, you can integrate the provided code and resources into your own Unity task. 
 
 **Technical requirements:**  
 
@@ -49,9 +49,7 @@ We provide preimplemented code for all steps, and we go through the steps of how
 
 To get started, download the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
 
-Then, start with Notebook 1.
-
----
+[Start with Notebook 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }
 ---
 
 {: .new-title }
@@ -62,7 +60,7 @@ Then, start with Notebook 1.
 > If you use this resource and encounter challenges, problems or solutions that are not covered within the materials provided here, we look forward to hearing from you so this resource can grow with the experience of our research community. 
 
 ---
---- 
+
 
 
 ## Get in touch 
