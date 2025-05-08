@@ -21,17 +21,19 @@ We recommend starting with reading the main tutorial paper for a high-level over
 > Within these accompanying materials, we present a minimal pipeline that implements communication between a Unity task and a web application, enabling a Unity task to send and retrieve data through the internet. 
 
 The materials consist of 3 Notebooks, each tackling a discrete part of the pipline: 
-1. **Notebook 1:** Implementing data transfer functionalities within Unity
-2. **Notebook 2:** Setting up a web application that the Unity task can access
-3. **Notebook 3:** Using decryption to ensure data security
+**Notebook 1:** Implementing data transfer functionalities within Unity
+**Notebook 2:** Setting up a web application that the Unity task can access
+**Notebook 3:** Using decryption to ensure data security
 
 These Noteboks go hand-in-hand with the resources provided within the onlineVR-toolbox. That is, together, they are designed to replicate a minimal pipline that sends (encrypted) data from a unity task to a web server where we can download it and decrypt it. 
 
 ## Requirements
   
 
-{: .highight }
-This is a self-contained tutorial: you can replicate the minial pipeline using only the provided materials. 
+{: .highlight}
+This is a self-contained tutorial: you can replicate the minial pipeline using only the provided materials.   
+  
+
   
 You don't need your own Unity task/project to follow this tutorial. The task also does not need to be uploaded on Steam (ar another gamestore) or packaged as a build. 
 In fact, we recommend reading through the Notebooks first, and then replicating the pipleine with the resources provided here. This will make troubleshooting easier and allows you to get a sense of the involved steps. Once you have implemented a working pipeline, you can integrate the provided code and resources into your own Unity task. 
@@ -71,6 +73,3 @@ Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
 AB&C Lab - abclab@psy.ox.ac.uk
 
 ![](../../assets/images/server1.png)
-
-Where is the image.
-
