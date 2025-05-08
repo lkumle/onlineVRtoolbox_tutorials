@@ -57,7 +57,7 @@ To get started, download the [onlineVR-toolbox](https://github.com/lkumle/online
 {: .new-title }
 > Feedback and Contributions
 >
-> This is a developing resource built with the intention to help other researchers to get their VR tasks online. We wellcome contributions, suggestions and feedback to this work. 
+> This is a developing resource built with the intention to help other researchers to get their VR tasks online. We welcome contributions, suggestions and feedback to this work. 
 >
 > If you use this resource and encounter challenges, problems or solutions that are not covered within the materials provided here, we look forward to hearing from you so this resource can grow with the experience of our research community. 
 
