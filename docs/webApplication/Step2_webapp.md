@@ -44,7 +44,9 @@ At the top, you will see your web address. You will need to use this exact URL i
  
 
 ---
----
+---  
+   
+   
 {: .important}
 > The web application will run for 3 months and then is automatically disabled.
 >
