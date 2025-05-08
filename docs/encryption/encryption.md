@@ -54,6 +54,76 @@ Note that ASCII-based AES keys that are hardcoded in the server backend (i.e., s
 
 ## Details for `Encrypt()`-function
 
+For detais on the `Encrypt()`-function, see below and the `ConnectionHandler.cs` script with in the Unity template (also see Notebook 1 for details on the `ConnectionHandler.cs`). 
 
+```c#
+public byte[] Encrypt(byte[] data)
+    {
+        /// ---------------- 
+        // Function Name: Encrypt()
+        // Purpose: Encrypts a byte array using AES encryption and returns the encrypted byte array.
+        // This function uses a specified encryption key and initialization vector (IV) to perform AES encryption in CBC mode.
+        // Parameters: 
+        //   byte[] data - The byte array to be encrypted.
+        // Return Value: 
+        //   byte[] - The encrypted byte array.
+        // 
+        // Explanation:
+        // 1. Creates an AES algorithm instance using Aes.Create().
+        // 2. Sets the encryption key and IV using UTF-8 encoding for the provided key and IV strings.
+        // 3. Creates an encryptor object using the AES algorithm's key and IV.
+        // 4. Uses a MemoryStream to hold the encrypted data and a CryptoStream to perform the encryption.
+        // 5. Writes the byte data to the CryptoStream, encrypting it as it’s written.
+        // 6. Returns the encrypted byte array after flushing the final block of data.
+        // --------
+
+        // Create a new AES algorithm instance
+        using (Aes aesAlg = Aes.Create())
+        {
+            // Set the encryption key and initialization vector (IV) using UTF-8 encoding
+            aesAlg.Key = System.Text.Encoding.UTF8.GetBytes(encryptionKey);
+            aesAlg.IV = GenerateRandomIV(); // Generate a random IV for each encryption
+
+            // Create an encryptor object using the AES algorithm's key and IV
+            ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+            // Use a MemoryStream to hold the encrypted data
+            using (MemoryStream msEncrypt = new MemoryStream())
+            {
+                // Create a CryptoStream to perform the encryption
+                using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                {
+                    // Write the byte data to the CryptoStream, which encrypts it
+                    csEncrypt.Write(data, 0, data.Length);
+
+                    // Add padding if necessary and flush the final block of encrypted data
+                    csEncrypt.FlushFinalBlock();
+                }
+
+            // Get the encrypted data from the MemoryStream
+            byte[] encryptedData = msEncrypt.ToArray();
+
+            // Prepend the IV to the encrypted data
+            byte[] dataForUpload = new byte[aesAlg.IV.Length + encryptedData.Length];
+            Buffer.BlockCopy(aesAlg.IV, 0, dataForUpload, 0, aesAlg.IV.Length); // copy IV to new array
+            Buffer.BlockCopy(encryptedData, 0, dataForUpload, aesAlg.IV.Length, encryptedData.Length); // add data to new array after IV
+
+            // Return the combined IV and encrypted data
+            return dataForUpload;
+            }
+        }
+    }
+
+    // Generate a random initialization vector (IV) for AES encryption
+    private byte[] GenerateRandomIV()
+    {
+        byte[] iv = new byte[16]; // 16 bytes for AES
+        using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+        {
+            rng.GetBytes(iv);
+        }
+        return iv;
+    }
+```
 
 
