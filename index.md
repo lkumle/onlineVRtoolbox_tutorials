@@ -74,4 +74,7 @@ Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
   
 AB&C Lab - abclab@psy.ox.ac.uk / [https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition](https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition)
 
-![](../../assets/images/server1.png)
+Add some text before
+   
+   
+![](../../assets/images/logo.png)
