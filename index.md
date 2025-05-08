@@ -70,7 +70,7 @@ Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
   
 AB&C Lab - abclab@psy.ox.ac.uk
 
-![](../../assets/images/logo.png)
+![](../../assets/images/server1.png)
 
 Where is the image.
 
