@@ -6,31 +6,33 @@ nav_order: 1
 
 # Running Virtual Reality Experiments Online: A Brief Introduction and Tutorial
 
+**Authors:** Levi Kumle, Alfie Brazier, Joel Kovoor, Johannes Keil, Anna C. Nobre & Dejan Draschkow
 
-How to use this resource: 
-- It is designed to replicate a minimal pipline that sends (encrypted) data from a unity task to a web server where we can download it and decrypt it. 
+## Overview
+This website hosts step-by-step practical Notebooks accompanying the tutorial "Running Virtual Reality Experiments Online: A Brief Introduction and Tutorial" and the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
 
+The aim of these Notebooks and the onlineVR-toolbox is to provide a preimplemented solution for a core challenge of online data collection with VR: Implementing data transfer functionalities. Here, we present a minimal pipeline that implements communication between a Unity task and a web application, enabling the VR task to send and retrieve data through the internet. 
 
+We recommend starting with reading the main tutorial paper for a high-level overview of the challenges of collecting data online for VR experiments. 
 
-Using the Notebooks and tools provided in onineVR-toolbox this leads you through all the steps. 
+Here, we present three Notebooks, each tackling a discrete part of the pipline: 
+1. Notebook 1: Implementing data transfer functionalities within Unity
+2. Notebook 2: Setting up a web application that the Unity task can access
+3. Notebook 3: Using decryption to ensure data security
 
-Notebooks available: 
-1. Server
-2. Encryption
-3. Unity
+These Noteboks go hand-in-hand with the resources provided within the onlineVR-toolbox. That is, together, they are designed to replicate a minimal pipline that sends (encrypted) data from a unity task to a web server where we can download it and decrypt it. 
 
-# Requirements
+## Requirements
 
-
-Quickstart: 
-
+F
+Following the Notebooks does not require you to have your own Unity task ready
 This does not require uploading on steam. ALso does not require packaging task as a build. 
 
 If you want to follow along, you will need Unity installed. We also assume a basic understanding of Unity and C# and python programming. However, none of the steps requrire you to do any coding. 
 ALl code is pre-implemented and we go through the steps of how to configure this. 
 
 
-# Quickstart:
+## Getting started:
 - download materias here: https://github.com/lkumle/onlineVR-toolbox
 
 
@@ -45,11 +47,11 @@ ALl code is pre-implemented and we go through the steps of how to configure this
 
 
 ## Get in touch: 
-Levi Kumle - levi.kumel@psy.ox.ac.uk
+Levi Kumle - levi.kumel@psy.ox.ac.uk  
+  
 Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
-
+  
 AB&C Lab - abclab@psy.ox.ac.uk
-
 
 ![](../../assets/images/logo.png)
 
