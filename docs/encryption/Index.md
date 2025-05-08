@@ -26,7 +26,7 @@ To use AES encryption correctly, we need:
 ---
 ---
   
-  
+
 {: .new-title }
 > Getting Started:
 >
@@ -35,3 +35,4 @@ To use AES encryption correctly, we need:
 > 2. Follow Step 2 to learn how to decrypt any transferred data once it is downloaded from the web server. 
 
 
+[Continue with Step 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/encryption.html){: .btn }
