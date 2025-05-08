@@ -11,13 +11,16 @@ nav_order: 1
 ## Overview
 This website hosts step-by-step **practical Notebooks** accompanying the tutorial *Running Virtual Reality Experiments Online: A Brief Introduction and Tutorial*  and the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
 
-The aim of these Notebooks and the onlineVR-toolbox is to provide a preimplemented solution for a core challenge of online data collection with VR: Implementing data transfer functionalities.  
+The aim of these Notebooks and the onlineVR-toolbox is to provide a solution for a core challenge of online data collection with VR: Implementing data transfer functionalities.    
+
 We recommend starting with reading the main tutorial paper for a high-level overview of the challenges of collecting data online for VR experiments. 
 
-{: .important}
-Within these accompanying materials, we present a minimal pipeline that implements communication between a Unity task and a web application, enabling the Unity task to send and retrieve data through the internet. 
+{: .important-title}
+> Overview of provided resources
+>
+> Within these accompanying materials, we present a minimal pipeline that implements communication between a Unity task and a web application, enabling a Unity task to send and retrieve data through the internet. 
 
-The mterials consist of 3 Notebooks, each tackling a discrete part of the pipline: 
+The materials consist of 3 Notebooks, each tackling a discrete part of the pipline: 
 1. **Notebook 1:** Implementing data transfer functionalities within Unity
 2. **Notebook 2:** Setting up a web application that the Unity task can access
 3. **Notebook 3:** Using decryption to ensure data security
@@ -25,19 +28,22 @@ The mterials consist of 3 Notebooks, each tackling a discrete part of the piplin
 These Noteboks go hand-in-hand with the resources provided within the onlineVR-toolbox. That is, together, they are designed to replicate a minimal pipline that sends (encrypted) data from a unity task to a web server where we can download it and decrypt it. 
 
 ## Requirements
+  
+
 {: .highight }
 This is a self-contained tutorial: you can replicate the minial pipeline using only the provided materials. 
   
-You don't need your own Unity task to be ready. The task also does not need to be uplaoded on Steam (ar another gamestore) or packaged as a build. 
-We recommend to first replicate the pipleine provided here. This will make troubleshooting easier and allows you to get a sense of the involved steps. Once you have implemented a working pipeline, you can integrate the provided code and resources into your own Unity task. 
+You don't need your own Unity task/project to follow this tutorial. The task also does not need to be uploaded on Steam (ar another gamestore) or packaged as a build. 
+In fact, we recommend to first replicate the pipleine with the resources provided here. This will make troubleshooting easier and allows you to get a sense of the involved steps. Once you have implemented a working pipeline, you can integrate the provided code and resources into your own Unity task. 
 
-We assume a basic understanding of Unity,  C#,  Python. However, replicating the minimal pipeline does not requrire you to do any coding yourself. 
-We provide preimplemented code for all steps, and we go through the steps of how to configure the provided code. 
+**Technical requirements:**  
 
-**Technical requirements:**
 Replicating the minimal pipeline on your own machine requires you to have a running version of: 
 - Unity (Editor version 2022.3.59f1)
 - Jupyter Notebooks (or another Python environment)
+
+We assume a basic understanding of Unity,  C#,  Python. However, replicating the minimal pipeline does not requrire you to do any coding yourself. 
+We provide preimplemented code for all steps, and we go through the steps of how to configure the provided code. 
 
 ## Getting started
 
