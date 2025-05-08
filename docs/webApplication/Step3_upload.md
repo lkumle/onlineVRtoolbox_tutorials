@@ -27,22 +27,24 @@ The GET method is used to retrieve data on a server. In our case, we are using i
 
 Following a GET request from the testConnection() in our Unity experiment, the web application first retrieves (and increments) a subject number (also see get_next_id() fuction in bottle_app.py script). Then, this subject number is returned within a response message that is returned to testConnection(). 
 
+Note that the response message also returns an encryption key. For more information on encryption within the onlineVR-toolbox, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
+
 ```python
 # =============================================== #
 # # Define a GET endpoint to allocate a unique ID
 # =============================================== #
 @application.get('/')
 def welcome():
-  """
-  Handles GET requests. Allocates a unique ID and returns a response.
-  """
-  # get updated ID
-  allocated_id = get_next_id()
-  
-  # return response
-  # ensures the allocated_id is displayed as a 6-digit number, padded with leading zeros if necessary.
-  response_message = f'Connection established. Allocated ID: {allocated_id:06d}'
-  return response_message
+    """
+    Handles GET requests. Allocates a unique ID and returns a response.
+    """
+    # get updated ID
+    allocated_id = get_next_id()
+
+    # return response
+    # ensures the allocated_id is displayed as a 6-digit number, padded with leading zeros if necessary.
+    response_message = f'{allocated_id:06d} : {encryption_key}'
+    return response_message
 ```
 
 **PUT endpoint**    
@@ -101,7 +103,7 @@ Inside the mysite/ directory:
 **3. Upload Supporting Files and Directories**  
 
 1. Upload the provided ID.txt file to the mysite/ directory (using the "Upload a file" button). 
-This file keeps track of assigned subject numbers, allowing the web application to generate unique IDs for each participant.
+This file keeps track of assigned subject numbers, allowing the web application to generate unique IDs for each participant. 
 2. Create a new directory named *files/* inside mysite/. 
 This is where the web application will store incoming data. 
 
