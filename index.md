@@ -36,12 +36,22 @@ ALl code is pre-implemented and we go through the steps of how to configure this
 
 
 
+{: .new-title }
+> Feedback and Contributions
+>
+> This is a developing resource built with the intention to help other researchers to get their VR tasks online. We wellcome contributions, suggestions and feedback to this work. 
+>
+> If you use this resource and encounter challenges, problems or solutions that are not covered within the materials provided here, we look forward to hearing from you so this resource can grow with the experience of our research community. 
 
-## Notes
- This is a developing resource built with the intention to help other researchers to get their VR tasks online. We wellcome contributions 
+
+## Get in touch: 
+Levi Kumle - levi.kumel@psy.ox.ac.uk
+Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
+
+AB&C Lab - abclab@psy.ox.ac.uk
+
+
+![](../../assets/images/logo.png)
 
 
 
-Please cite: MANUSCRIPT
-
-Contact: 
