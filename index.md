@@ -68,5 +68,5 @@ AB&C Lab - abclab@psy.ox.ac.uk
 
 ![](../../assets/images/logo.png)
 
-
+Where is the image.
 
