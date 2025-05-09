@@ -4,16 +4,10 @@ nav_order: 2
 layout: default
 ---
 
-# 1. Implementing data transfer functionality in Unity project
+# Notebook 1: Implementing data transfer functionality within Unity 
 
-Authors:   
-last edited:  
 
-citation:
-
----
-
-In this notebook, we will walk through how to implement data transfer functionality inside the unity project itself . We will assume that you know unity well enough to implement your experiments in unity. 
+In this notebook, we will walk through how to implement data transfer functionality inside the unity project itself. 
 
 For this, we created a template with the minimal required functionality. That is, connect to the server, get a subject number. Whem prompoted, upload data to the server. 
 
@@ -24,22 +18,9 @@ In the end, you will have a minimal working version of a unity project and a web
 Lastly, we discuss how to integrate this functionality into your own unity projects. Overall, we hope this enables you to quickly solve this major challenge of testing unity projects online. 
 
 
-<div style="background-color: #E2F0DB; border-left: 6px solid #B5C8A8; padding: 10px;">
-  <strong>To get started:</strong> Download the matrials provided at LINK and follow the steps below!
-</div>
+{: .important-title}
+Here shared project is a VR project using the steamVR SDK. However, replicating the pipeline does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended). 
 
---- 
----
-
-**A note on technical requirements:**
-
-- versions we used. 
-
-
-<div style="background-color: #FDF1D3; border-left: 6px solid #F2AA84; padding: 10px;">
-  <strong>Note:</strong> he shared project is a VR project using the steamVR SDK. However, replicating the pipeline does not require the full VR setup.
-  - If you want to test this without setting up VR, simply deactivate the Player GameObject.  (see below)
-</div>
 
 --- 
 --- 
