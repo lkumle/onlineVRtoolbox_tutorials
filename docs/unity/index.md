@@ -25,7 +25,7 @@ Here shared project is a VR project using the steamVR SDK. However, replicating 
 --- 
 --- 
 
-### 1.1. Overview
+## Overview
 
 In this provided template project, two scripts are important (you can find both in the Assets folder; alo see Figure below):
 - ExperimentHandler.cs (attached to ExperimentHandler gameObject)
