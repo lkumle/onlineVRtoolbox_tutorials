@@ -6,11 +6,19 @@ parent: Notebook 3 – Encryption and Decryption
 
 ## Decrypting Received Data
 
-After downloading the encrypted data from the server, we need to decrypt it before we can use it for analysis. 
+Here, we assume that you sucessfully recieved the encrypted data.  After downloading the encrypted data from the server, we need to decrypt it before we can use it for analysis. 
+To simplify this process, we provide an implementation in a Python notebook. 
 
-To simplify this process, we provide an implementation in a Python notebook. You can dowload the Jupyter Notebook here: [GitHub](). 
+You can dowload the Jupyter Notebook here: [GitHub](). 
 
+To download the data, go the the FIes tab in python anywhere. Navigate to mysite/files/
+
+Here we assume that you sucessful
 {EXPLAIN WHAT IS GOING ON HERE AND THAT IT IS COMPLEMENTARY TO THE ENCRYPTION IN UNITY}
+
+
+
+
 
 ```python
 # Function to decrypt AES-CBC encrypted data
@@ -64,6 +72,7 @@ To use the decryption script, follow these steps:
 2. Specify the **filepath** to the folder containing the encrypted files. You also need to specify the **filepath** for the folder where you want the decrypted files to be saved.
 
 ![](../../assets/images/decryption1.png)
+
 
 **2. Run and check code**  
 After configuring the script, run the rest of the code to perform decryption.
