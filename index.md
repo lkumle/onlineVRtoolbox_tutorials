@@ -79,4 +79,4 @@ Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
 ---
 
 
-![](/assets/images/logo.png)
+![](assets/images/logo.png)

@@ -7,17 +7,46 @@ parent: Notebook 3 – Encryption and Decryption
 ## Decrypting Received Data
 
 Here, we assume that you sucessfully recieved the encrypted data.  After downloading the encrypted data from the server, we need to decrypt it before we can use it for analysis. 
-To simplify this process, we provide an implementation in a Python notebook. 
+To simplify this process, we provide an implementation in a Python notebook that is complementary to the encryption algorithm provided in the Encrypt() function in ConnectionHandler.cs 
 
-You can dowload the Jupyter Notebook here: [GitHub](). 
-
-To download the data, go the the FIes tab in python anywhere. Navigate to mysite/files/
-
-Here we assume that you sucessful
-{EXPLAIN WHAT IS GOING ON HERE AND THAT IT IS COMPLEMENTARY TO THE ENCRYPTION IN UNITY}
+You can dowload the Jupyter Notebook here: [GitHub](https://github.com/lkumle/onlineVR-toolbox). 
 
 
+**Download data from PythonAnywhere**
+  
+To download the data, go the the Filees tab in python anywhere. Navigate to /mysite/files/. The download the recieved data. 
 
+
+![](../../assets/images/downloadData.png)
+
+
+## Configuring and running Jupyter Notebook
+
+To decrypt the data, we first need to configure the jupyter notebook. Most importantly, we need to specify the encryption key. That is, the same key we entered within the Bottle_app.py web appplicatuon script. 
+
+
+**1. Configure encryption key**  
+To use the decryption script, follow these steps:
+
+1. Provide the **encryption key**. This must be the same values used for encryption. 
+2. Specify the **filepath** to the folder containing the encrypted files. You also need to specify the filepath for the folder where you want the decrypted files to be saved.
+
+![](../../assets/images/decryption1.png)
+
+
+**2. Run and check code**  
+After configuring the script, run the rest of the code to perform decryption.
+
+
+
+When you follow the step-by-step tutorial using the Unity template, the decrypted data should look like this:
+
+"This is test data for block: 1"
+
+"This is test data for block: 2"
+
+
+## Details for Decryption function
 
 
 ```python
@@ -63,24 +92,3 @@ def decrypt_aes(encrypted_data, key, iv_length = 16):
 
 
 
-## Configuring and running Jupyter Notebook
-
-**1. Configure encryption key**  
-To use the decryption script, follow these steps:
-
-1. Provide the **encryption key**. This must be the same values used for encryption. 
-2. Specify the **filepath** to the folder containing the encrypted files. You also need to specify the **filepath** for the folder where you want the decrypted files to be saved.
-
-![](../../assets/images/decryption1.png)
-
-
-**2. Run and check code**  
-After configuring the script, run the rest of the code to perform decryption.
-
-
-
-When you follow the step-by-step tutorial using the Unity template, the decrypted data should look like this:
-
-"This is test data for block: 1"
-
-"This is test data for block: 2"
