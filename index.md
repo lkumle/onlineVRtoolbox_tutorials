@@ -51,7 +51,7 @@ We provide preimplemented code for all steps, and we go through the steps of how
 
 To get started, download the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
 
-[Start with Notebook 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }
+[Start with Notebook 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/){: .btn }
 
 
 ---
