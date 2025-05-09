@@ -34,7 +34,7 @@ To use the decryption script, follow these steps:
 ![](../../assets/images/decryption1.png)
 
 
-**2. Run and check code**  
+**2. Decrypt files**  
 After configuring the script, simply run Step 3 within the Jupyter Notebook. The decrypted data files will be saved to the path specified in `file_path_out`. 
 
 
