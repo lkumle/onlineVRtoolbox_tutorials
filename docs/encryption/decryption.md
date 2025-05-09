@@ -7,12 +7,12 @@ parent: Notebook 3 – Encryption and Decryption
 ## Decrypting Received Data
 
 Here, we assume that you sucessfully recieved the encrypted data.  After downloading the encrypted data from the server, we need to decrypt it before we can use it for analysis. 
-To simplify this process, we provide an implementation in a Python notebook that is complementary to the encryption algorithm provided in the Encrypt() function in ConnectionHandler.cs 
+To simplify this process, we provide an implementation in a Python notebook that is complementary to the encryption algorithm provided in the `Encrypt()` function in `ConnectionHandler.cs`. 
 
 You can dowload the Jupyter Notebook here: [GitHub](https://github.com/lkumle/onlineVR-toolbox). 
 
 
-**Download data from PythonAnywhere**
+**1. Download data from PythonAnywhere**
   
 To download the data, go the the Filees tab in python anywhere. Navigate to /mysite/files/. The download the recieved data. 
 
@@ -20,12 +20,12 @@ To download the data, go the the Filees tab in python anywhere. Navigate to /mys
 ![](../../assets/images/downloadData.png)
 
 
-## Configuring and running Jupyter Notebook
+
+**2. Configure the Jupyter Notebook**  
 
 To decrypt the data, we first need to configure the jupyter notebook. Most importantly, we need to specify the encryption key. That is, the same key we entered within the Bottle_app.py web appplicatuon script. 
 
 
-**1. Configure encryption key**  
 To use the decryption script, follow these steps:
 
 1. Provide the **encryption key**. This must be the same values used for encryption. 
@@ -35,60 +35,13 @@ To use the decryption script, follow these steps:
 
 
 **2. Run and check code**  
-After configuring the script, run the rest of the code to perform decryption.
+After configuring the script, simply run Step 3 within the Jupyter Notebook. The decrypted data files will be saved to the path specified in `file_path_out`. 
 
 
-
-When you follow the step-by-step tutorial using the Unity template, the decrypted data should look like this:
-
-"This is test data for block: 1"
-
-"This is test data for block: 2"
-
-
-## Details for Decryption function
-
-
-```python
-# Function to decrypt AES-CBC encrypted data
-def decrypt_aes(encrypted_data, key, iv_length = 16):
-    
-    """
-    Decrypts AES-CBC encrypted data and removes the padding using PKCS7.
-
-    This function decrypts the provided encrypted data using the AES algorithm
-    in CBC (Cipher Block Chaining) mode, then removes the padding that was 
-    added during encryption using the PKCS7 padding scheme.
-
-    Parameters:
-    - encrypted_data (bytes): The encrypted data to be decrypted.
-    - key (bytes): The AES encryption key (must be 16 bytes for AES-128).
-    - iv_lengths (int): Lengths of random AES initialization vector (IV). 
-
-    Returns:
-    - bytes: The decrypted data with padding removed, i.e., the original plaintext.
-    
-    """
-    
-    # Extract the IV from the beginning of the encrypted data
-    iv = encrypted_data[:iv_length]
-
-    # Remove the IV from the encrypted data
-    data = encrypted_data[iv_length:]
-    
-    # Initialize the cipher for decryption using AES-CBC mode with provided key and IV
-    cipher = Cipher(algorithms.AES(key), modes.CBC(iv))
-    decryptor = cipher.decryptor()
-    
-    # Decrypt the data
-    decrypted_padded = decryptor.update(data) + decryptor.finalize()
-    
-    # Remove padding using PKCS7
-    unpadder = padding.PKCS7(128).unpadder() #128 referrs to block size used by AES encryption
-    decrypted_data = unpadder.update(decrypted_padded) + unpadder.finalize()
-    
-    return decrypted_data 
-```
-
-
+{: .important-title }
+> Check that everything is working 
+>
+> In case you are replicating the minimal pipeline using the materials provided for this tutorial, the decrypted data file should consist of the folowing message:
+> 
+> "Well done! You have sucessfully encrypted, transferred, and decrypted a data file."
 
