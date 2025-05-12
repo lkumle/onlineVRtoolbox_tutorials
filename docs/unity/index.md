@@ -17,30 +17,29 @@ For this, we created a template Unity project with the minimal required function
 > To get started, download and open the "onlineTask_template" Unity project within the Unitor Editor.
 
 
-The goal of this Notebook is to enable you to ultimately integrate the provided implementation into your own Unity project. 
-  
-
-
-Lastly, we discuss how to integrate this functionality into your own unity projects. Overall, we hope this enables you to quickly solve this major challenge of testing unity projects online. 
-
-
-{: .important-title}
-Here, share project is a VR project using the steamVR SDK. However, replicating the pipeline does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended). 
+The goal of this Notebook is to enable you to ultimately integrate the provided implementation into your own Unity project. To do so, we recommend to first replicate the minimal pipeline by following Notebook 1 and 2. Once you are able to send and recieve data from the template Unity task to your web application, you can move on to integrating the provided functionality within your own Unity project. 
 
 
 --- 
 --- 
 
-## Overview
+## Overview of template Unity task
 
-In this provided template project, two scripts are important (you can find both in the Assets folder; alo see Figure below):
-- ExperimentHandler.cs (attached to ExperimentHandler gameObject)
-- ConnectionHandler.cs (attached to ConnectionMenu PreFab)
+First, we will go through the general pipeline by looking at the Unity template task. This is already set up - so we will just explore. 
 
-We additionally added a "basic scene" which is just a empty room. We will treat this as a stand-in for the actual experiment virtual environment.
+Let's first familiarise ourselfs with thie Unity project. Let's start with the hieararchy. 
 
+In this provided template project, two components are important (you can find both in the Hierarchy of the Unity Editor; also see Figure below):
+- ExperimentHandler game object (and the attached ExperimentHandler.cs script)
+- ConnectionMenu Prefab (and the attached ConnectonHandler.cs script)
 
 ![](../../assets/images/unity0.png)
+
+Additionally, we added a "basic scene" which is just a empty room as a stand-in for the actual task environment. Lastly, the template task contains a "Player" gameObject, which is part of the SteamVR SDK integration.
+
+{: .highlight}
+Replicating the pipeline within the template Unity task does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended). 
+
 
 
 **Experimenthandler.cs** defines the overall experimental logic and sequence. That is, this script handles the sequential logic of defining  blocks, trials etc. 
