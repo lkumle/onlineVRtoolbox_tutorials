@@ -20,9 +20,12 @@ We recommend starting with reading the main tutorial paper for a high-level over
 >
 > Within these accompanying materials, we present a minimal pipeline that implements communication between a Unity task and a web application, enabling a Unity task to send and retrieve data through the internet. 
 
-The materials consist of 3 Notebooks, each tackling a discrete part of the pipline: 
-**Notebook 1:** Implementing data transfer functionalities within Unity
+The materials consist of 3 Notebooks, each tackling a discrete part of the pipline:   
+  
+**Notebook 1:** Implementing data transfer functionalities within Unity  
+  
 **Notebook 2:** Setting up a web application that the Unity task can access
+  
 **Notebook 3:** Using decryption to ensure data security
 
 These Noteboks go hand-in-hand with the resources provided within the onlineVR-toolbox. That is, together, they are designed to replicate a minimal pipline that sends (encrypted) data from a unity task to a web server where we can download it and decrypt it. 

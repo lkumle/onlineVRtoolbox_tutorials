@@ -9,17 +9,23 @@ layout: default
 
 In this notebook, we will walk through how to implement data transfer functionality inside the unity project itself. 
 
-For this, we created a template with the minimal required functionality. That is, connect to the server, get a subject number. Whem prompoted, upload data to the server. 
+For this, we created a template Unity project with the minimal required functionality. In this Notebook, we will go through the implementation of the critical fucntionalities within this template project. 
 
-In this notebook, we will go through the implementation of this minimal template. In Notebook 2, you will then create the web aplication itslef that recieves tha data. 
+{: .new-title}
+> Get started
+> 
+> To get started, download and open the "onlineTask_template" Unity project within the Unitor Editor.
 
-In the end, you will have a minimal working version of a unity project and a web server with remote data transfer functionality.  
+
+The goal of this Notebook is to enable you to ultimately integrate the provided implementation into your own Unity project. 
+  
+
 
 Lastly, we discuss how to integrate this functionality into your own unity projects. Overall, we hope this enables you to quickly solve this major challenge of testing unity projects online. 
 
 
 {: .important-title}
-Here shared project is a VR project using the steamVR SDK. However, replicating the pipeline does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended). 
+Here, share project is a VR project using the steamVR SDK. However, replicating the pipeline does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended). 
 
 
 --- 
