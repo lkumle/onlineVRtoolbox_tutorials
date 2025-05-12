@@ -30,8 +30,8 @@ First, we will go through the general pipeline by looking at the Unity template 
 Let's first familiarise ourselfs with thie Unity project. Let's start with the hieararchy. 
 
 In this provided template project, two components are important (you can find both in the Hierarchy of the Unity Editor; also see Figure below):
-- ExperimentHandler game object (and the attached ExperimentHandler.cs script)
-- ConnectionMenu Prefab (and the attached ConnectonHandler.cs script)
+- ExperimentHandler game object (and the attached `ExperimentHandler.cs` script)
+- ConnectionMenu Prefab (and the attached `ConnectonHandler.cs` script)
 
 ![](../../assets/images/unity0.png)
 
@@ -42,10 +42,16 @@ Replicating the pipeline within the template Unity task does not require the ful
 
 
 
-**Experimenthandler.cs** defines the overall experimental logic and sequence. That is, this script handles the sequential logic of defining  blocks, trials etc. 
-Here, we created a minimal experimetnal sequence of just two empty blocks (nothing is happening besides creating a small data frame) as a stand in to the actual experimantal logic. We did this to show how the data transfer functionality can and should be integrated into an existing experimental logic. 
+**Experimenthandler**
 
-ConnectionHandler.cs handles the actual functionality needed to communicate with server (see Fig X highlighted in orange). 
+The `ExperimentHandler.cs` script attached to the Experimenthandler game object defines the overall experimental logic and sequence. That is, this script handles the sequential logic of defining  blocks, trials etc. Here, we created a minimal experimetnal sequence of just two empty blocks (nothing is happening besides creating a small data frame) as a stand in to the actual experimantal logic. 
+
+
+![](../../assets/images/unity1.png)
+
+**ConnectionMenu and ConnectionHandler.cs**  
+
+handles the actual functionality needed to communicate with server (see Fig X highlighted in orange). 
 
 **There are two main functions and stages of this.**
 1. Testing connection & assigning subject number once sucessful 
@@ -55,8 +61,8 @@ For all of this, there are two main routines: testconnection() and Upload(). For
 
 Then there are a few helper functions which lets us trigger these routines and embedd tehse in our experiment logic. 
 
-Below, we go into detail how this works. 
 
-![](../../assets/images/unity1.png)
+
+
 
 
