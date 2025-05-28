@@ -7,7 +7,7 @@ parent: Notebook 1 – Data transfer in Unity
 
 ## GET requests:  Establishing connection and retrieving subject ID 
 
-Before participants start the experiment, we want to make sure that a connection with the server is established. This is important to both make sure that the participant has a working internet coonnection so that data can be uploaded once required. Additionally, we want to assign a uniwue subject ID (add why based on main manuscript stuff: link data accross plattforms, distingiguis general public from research participants, ...). 
+Before participants start the experiment, we want to make sure that a connection with the server is established. This is important to both make sure that the participant has a working internet connection so that data can be uploaded once required. Additionally, we want to assign a unique subject ID (add why based on main manuscript stuff: link data accross plattforms, distingiguis general public from research participants, ...). 
 
 
 To implement this, we start the experiment logic with testing the connection. That is, we display the connectionMenu and trigger the testConnection()-function. 
