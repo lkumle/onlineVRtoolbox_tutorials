@@ -28,7 +28,7 @@ To decrypt the data, we first need to configure the jupyter notebook. Most impor
 
 To use the decryption script, follow these steps:
 
-1. Provide the **encryption key**. This must be the same values used for encryption. 
+1. Provide the **encryption key**. This must be the same key used for encryption.
 2. Specify the **filepath** to the folder containing the encrypted files. You also need to specify the filepath for the folder where you want the decrypted files to be saved.
 
 ![](../../assets/images/decryption1.png)

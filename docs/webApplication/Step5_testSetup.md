@@ -9,7 +9,7 @@ parent: Notebook 2 – Web Application
 
 Let's finalise the set up and test whether everything works as expected. Here we assume that you have followed the previous steps and have a web application running on pythonanywhere.com, and that you are trying to replicate the minimal pipeline from the template project. However, this also applies to integrating the onlineVR-toolbox into your own Unity project. 
 
-
+--- 
 ### 1. Configure Unity with your web address
 
 1. Open the `ConnectionHandler.cs` script in Unity
@@ -24,7 +24,7 @@ Let's finalise the set up and test whether everything works as expected. Here we
     private string serverAddress = "https://TutorialTemplate.eu.pythonanywhere.com";
 
 ``` 
-
+---
 ### 2. Run project in Unity
 
 Run the Unity project. As a reminder, the ExperimentHandler.cs script runs two "blocks" of the experiment that are empty and do not do anthing, but it will call the `ConnectionHandler` upload data files at the end of each block.
@@ -41,14 +41,14 @@ You should also see the following messages in the console:
 >
 > Replicating the pipeline within the template Unity task does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended).
 
-
+---
 ### 3. Check if data has arrived on pythonanywhere server
 
 1. 1. Log in to your pythonanywhere account.
 2. Navigate to the "Files" tab and navigate to the directory where your data files are stored (e.g., `/home/yourusername/mysite/files/`).
 3. You should see the uploaded data files (e.g., `onlineVR_000001_2025-05-28_18-21_B1.bytes` and `onlineVR_000001_2025-05-28_18-21_B2.bytes`) in this directory.
 
-![](../../assets/images/test3.png)
+![](../../assets/images/test2.png)
 
 {: .highlight}
 If the filenames do not match the expected format (e.g., something is missing or random added characters), check the bottle_app.py file and ensure that the filename lengths is configured correctly (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html) for details).
@@ -56,7 +56,7 @@ If the filenames do not match the expected format (e.g., something is missing or
 {: .new}
 If you see the files, congratulations! You have successfully set up the onlineVR-toolbox and replicated the minimal pipeline. To learn how to decrypt the data files, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
 
-
+----
 ### 4. Double check that "retrying connection"/ "no connection" works as expected
 
 To test the connection handling, you can temporarily disable your internet connection or, if you are using the template project, you can also simply open the `ConnectionHandler.cs` script and change the server address to something wrong.
@@ -65,6 +65,7 @@ This should trigger the connection menu to appear, first notifying you that it i
 
 ![](../../assets/images/test3.png)
 
+----
 
 ### Troubleshooting
 If you encounter any issues during the setup or testing, here are some common troubleshooting steps:
