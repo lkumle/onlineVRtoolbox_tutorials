@@ -35,7 +35,8 @@ To configure the onlineVR-toolbox to work with your web application, you need to
 
 ### 5. Some additional notes and tips:
 
-**Invariant Culture Setting**
+**Invariant Culture Setting**  
+
 We recommend setting the current culture to invariant culture in your Unity project. This ensures that data formatting is consistent across different systems and avoids issues with locale-specific formats (e.g., decimal points, date formats). You can do this by adding the following line of code at the start of your main script (also see `ExperimentHandler.cs` in the template project):
 
 ```c#
