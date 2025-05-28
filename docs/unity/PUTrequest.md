@@ -6,17 +6,31 @@ parent: Notebook 1 – Data transfer in Unity
 
 ## Uploading data to the web application
 
-Now that we have established a connection with the web server and retrieved a subject number, we can start the experiment. Let's assume we have a simple experiment with two blocks. In each block, we want to collect some data and then upload it to the web application. To upload data to the web application, we need to implement a PUT request. A PUT request is used to send data to the server, in our case, the experiment data collected during the experiment.
+Now that we’ve established a connection with the web server and retrieved a subject number, we’re ready to start the experiment.
 
-Let's first see how we can address the upload functionality in the `ExperimentHandler.cs`, where we can call the `ConnectionHandler.UploadData()` function to trigger the upload process.
+Let’s assume a simple experiment structure with two blocks. After each block, we want upload the data we recorded to the web application. To do this, we'll use a PUT request, which is typically used to send data to a server—in our case, the data recorded during each block.
+
+We’ll handle the upload via the `ConnectionHandler.UploadData()` method, which we'll call from within `ExperimentHandler.cs.`
 
 
-First, a note on storing data locally before uploading it: The Upload function looks for locally stored data in csv format. That is, on the participants device. That is, we need to create a file on the participants device where we can store the data collected during the experiment.
-To do this, we will create a new file for each block of the experiment. This file will be stored in the **persistent data path** of the application, which is a location where a unity application downloaded from a game store has writing acces. Usually this might be used to e.g., store game progress or settings. In our case, we will use it to store the experiment data collected during the experiment.
+### Storing data locally before uploading
 
-We included an example of how to create a file in the persistent data path in the `ExperimentHandler.cs` file. The code snippet below shows how to create a file for each block of the experiment and then write some data into it. A note on filename: to make these unique on the server and avoid writing over existing files, we use the structure "onlineVR_{subjectNumber}_{date-time}_B{block}.csv".
+Before we upload anything, we first need to store the data locally on the participant’s device. The upload function expects data to be saved as a .csv file.
 
-Then, when we are ready to upload that data, we can close it and provide the `ConnectionHandler.UploadData()` function with the filename and filepath of the data file. This then uploads the data to the web application.
+**To do this:**  
+- We’ll create one CSV file per block of the experiment.
+- These files will be stored in Unity’s **persistent data path** —a platform-specific folder where applications downloaded from a game store have permission to write data. It’s typically used for things like save files or settings; in our case, we’ll use it to store experimental data.
+
+An example implementation is included in ExperimentHandler.cs. The snippet below shows how to:
+
+1. Create a new file in the persistent data path.
+2. Write data into the file for the current block.
+
+{: .new-title}
+> Note on file naming convention
+> 
+> To avoid overwriting data when multiple participants upload files, we use the following filename format: *onlineVR_{subjectNumber}_{datetime}_B{block}.csv*  
+> This ensures each file is uniquely identifiable on the server. Feel free to adjust the naming convention to suit your needs, but make sure it remains unique for each participant and block/upload.
 
 ```c#
 
@@ -46,22 +60,23 @@ Then, when we are ready to upload that data, we can close it and provide the `Co
 
         localDataFile.WriteLine("Well done, you have successfully decrypted this data file."); // write into file
 
-
-        // ------------------------- //
-        // UPLOAD DATA TO SERVER
-        // ------------------------- //
-        localDataFile.Close(); // close file
-
-        ConnectionHandler.UploadData(fileName, filePath); // upload data to server
-
-
-        //wait 5 seconds in between "blocks" (this is just for mock purposes )
-        yield return new WaitForSeconds(5);
-
-        Debug.Log("Block " + block + " finished");
-
     }
 ```
+
+### Storing data locally before uploading
+
+Once the block is complete and the data file has been written and closed, we trigger the upload by calling:
+
+```c#
+    // ------------------------- //
+    // UPLOAD DATA TO SERVER
+    // ------------------------- //
+    localDataFile.Close(); // close file
+
+    ConnectionHandler.UploadData(fileName, filePath); // upload data to server
+
+```
+This sends the CSV file to the web application via a PUT request.
 
 ---
 ---

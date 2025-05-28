@@ -7,15 +7,22 @@ parent: Notebook 1 – Data transfer in Unity
 
 ## Establishing a connection with the web server and retrieving a subject number
 
-Before participants start the experiment, we want to make sure that a connection with the server is established. This is important to both make sure that the participant has a working internet connection so that data can be uploaded once required. Additionally, we want to assign a subject number to the participant, which is done by sending a GET request to the web application.
+Before participants begin the experiment, we first need to establish a connection with the server. This serves two purposes:
 
-A GET request is a request to the server to retrieve data. In our case, we want to retrieve a subject number (and an encryption key, see [Notebook 3]()) from the web application. This is done by sending a GET request to the server, which then responds with the requested data.
+1. Ensure internet connectivity, so we know data uploads will be possible later.
+2. Retrieve a unique subject number for the participant from the server (along with an encryption key—see Notebook 3 for details).
 
-To implement this, we start the experiment logic with testing the connection. That is, we display the connectionMenu and trigger the `testConnection()`-function. To explore this within the template project, open the `ExperimentHandler.cs`. 
+To do this, we use a GET request—a standard HTTP request used to retrieve data from a server. In our case, we send a GET request to the web application, and the server responds with a subject number (and encryption key).
 
-The following code snippet shows the initial part of the experiment sequence in `ExperimentHandler.cs`. This part is responsible for establishing a connection with the web server before the experiment begins. It first displays the connection menu to inform the participant, calls `testConnection(`) from the `ConnectionHandler.cs` (which queries the server for a subject number and encryption key), and checks if the connection was successful using the connectionCheck() helper function.    
+### How It Works in the Template Project
+We begin the experiment by testing the connection. This is handled in ExperimentHandler.cs and follows this basic logic:
 
-If the connection fails, the experiment is stopped; otherwise, it proceeds to retrieve the assigned subject number from the `ConnectionHandler.cs` using the getSubjectNumber() helper function.
+1. **Show the connection menu** to inform the participant (this will automatically disappear once the connection is established)
+2. **Call testConnection()** from ConnectionHandler.cs to send the GET request.
+3. **Check the result with the connectionCheck()** helper function.
+4. If the connection is successful, **retrieve the subject number** using getSubjectNumber() from ConnectionHandler.cs.   
+
+If the connection test fails, the experiment is halted early to avoid running a session without the ability to upload data.
 
 ```c#
     // ------------------------------------------------------------------------------------------------ // 
@@ -43,8 +50,8 @@ If the connection fails, the experiment is stopped; otherwise, it proceeds to re
             Debug.Log("Connection failed. Stopping experiment.");
             yield break;
         }
-        
-        // queery assigned subject number from connection handler 
+
+        // query assigned subject number from connection handler
         SubjectNumber = ConnectionHandler.getSubjectNumber();
 ```
 
