@@ -31,6 +31,8 @@ An example implementation is included in ExperimentHandler.cs. The snippet below
 > 
 > To avoid overwriting data when multiple participants upload files, we use the following filename format: *onlineVR_{subjectNumber}_{datetime}_B{block}.csv*  
 > This ensures each file is uniquely identifiable on the server. Feel free to adjust the naming convention to suit your needs, but make sure it remains unique for each participant and block/upload.
+>
+> See Notebook 2 for details on how to set up the web application to handle these files.
 
 ```c#
 
