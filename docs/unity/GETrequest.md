@@ -51,6 +51,7 @@ If the connection fails, the experiment is stopped; otherwise, it proceeds to re
 ---
 ---
 
+### Detail: `testConnection()` function
 In case you are simply trying to use the onlineVR-toolbox or replicating the minimal pipeline, learning how to call the relevant functions within your experimental logic might be all you need to know. However, if you are interested in how the `testConnection()` routine works, let's have a look at it in detail.
 
 The routine starts by initiating a GET request to the specified server address. It then waits for the request to complete. If there's a network or HTTP error (e.g., the server is unreachable), it shows a failure message ("Connection failed. Retrying...") on the ConnectionMenu UI and automatically retries the connection after a short delay (4 seconds). The retry mechanism is limited to a maximum of 3 attempts. If all attempts fail, it displays a message indicating that the connection could not be established ("Connection failed. There may be a problem with our servers, try again later."). At t

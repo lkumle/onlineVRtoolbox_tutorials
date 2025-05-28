@@ -66,6 +66,7 @@ Then, when we are ready to upload that data, we can close it and provide the `Co
 ---
 ---
 
+### Detail: `Upload()` function
 Let's also explore this function in a bit more detail. This is not necessary if you simply want to use the provided function. In case you are interested or want to build on the provided code, let's have a look at the `Upload()` function in the `ConnectionHandler.cs` file.
 
 Note that we will explore the encryption process in more detail in [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html), but for now, we will assume that the `Encrypt()` function is defined and works as intended.
