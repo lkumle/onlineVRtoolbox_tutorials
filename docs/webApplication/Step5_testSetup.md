@@ -1,5 +1,5 @@
 ---
-title: Step 5 - Testing the set uplw
+title: Step 5 - Testing the set up
 layout: default
 parent: Notebook 2 – Web Application
 ---
