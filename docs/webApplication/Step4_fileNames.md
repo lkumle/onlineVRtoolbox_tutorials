@@ -67,3 +67,5 @@ To configure this:
 ![](../../assets/images/server7.jpg)
 
 
+[Continue with next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step5_testSetup.html){: .btn }
+
