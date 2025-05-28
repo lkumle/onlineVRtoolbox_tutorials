@@ -48,13 +48,16 @@ You should also see the following messages in the console:
 2. Navigate to the "Files" tab and navigate to the directory where your data files are stored (e.g., `/home/yourusername/mysite/files/`).
 3. You should see the uploaded data files (e.g., `onlineVR_000001_2025-05-28_18-21_B1.bytes` and `onlineVR_000001_2025-05-28_18-21_B2.bytes`) in this directory.
 
-![](../../assets/images/test2.png)
-
 {: .highlight}
 If the filenames do not match the expected format (e.g., something is missing or random added characters), check the bottle_app.py file and ensure that the filename lengths is configured correctly (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html) for details).
 
-{: .new}
-If you see the files, congratulations! You have successfully set up the onlineVR-toolbox and replicated the minimal pipeline. To learn how to decrypt the data files, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
+![](../../assets/images/test2.png)
+
+
+{: .new -title}
+> If you see the files, congratulations! 
+>
+> You have successfully set up the onlineVR-toolbox and replicated the minimal pipeline. To learn how to decrypt the data files, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
 
 ----
 ### 4. Double check that "retrying connection"/ "no connection" works as expected
