@@ -5,7 +5,7 @@ parent: Notebook 2 – Web Application
 ---
 
 
-## Finalise and Test Set up
+## Finalising and testing data transfer
 
 Let's finalise the set up and test whether everything works as expected. Here we assume that you have followed the previous steps and have a web application running on pythonanywhere.com, and that you are trying to replicate the minimal pipeline from the template project. However, this also applies to integrating the onlineVR-toolbox into your own Unity project. 
 
