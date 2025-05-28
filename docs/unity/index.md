@@ -32,10 +32,8 @@ In this provided template project, two components are important (you can find bo
 
 ![](../../assets/images/unity0.png)
 
-Additionally, we added a "basic scene" which is just an empty room as a stand-in for the actual task environment. Lastly, the template task contains a "Player" gameObject, which is part of the SteamVR SDK integration.
+Additionally, we added a "basic scene" which is just an empty room as a stand-in for the actual task environment. 
 
-{: .highlight}
-Replicating the pipeline within the template Unity task does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended). 
 
 ---
 

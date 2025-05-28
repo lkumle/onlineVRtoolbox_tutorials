@@ -36,11 +36,6 @@ You should also see the following messages in the console:
 ![](../../assets/images/test1.png)
 
 
-{: .highlight-title}
-> Reminder:
->
-> Replicating the pipeline within the template Unity task does not require the full VR setup. If you want to test this without setting up VR, simply deactivate the Player GameObject (recommended).
-
 ---
 ### 3. Check if data has arrived on pythonanywhere server
 
