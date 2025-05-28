@@ -4,38 +4,44 @@ layout: default
 parent: Notebook 1 – Data transfer in Unity 
 ---
 
-## Integrating into existing Unity project
+## Integrating onlineVR-toolbox into your Unity task
 
-How do you add it to your own unity task? This is the ultimate goal. 
-
-We packages it in a Unity package onlineVR. 
-
-## Install onlineVR package in Unity
-
-- Package manager: install from disk
-- select in folder. 
+Now that you have learned how to establish a connection with the web server and upload data, you might wonder how to integrate this functionality into your own Unity task. 
 
 
-## add prefab to unity project
+### 1. Install onlineVR package 
 
-- go to packages. add ConnectionMenu to unity project. 
-- open ConnectionHandler.cs: edit URL to your web application
+1. Download the onlineVR-toolbox package from the [GitHub repository](https://github.com/lkumle/onlineVRtoolbox/releases).
+2. Open your Unity project.
+3. Go to `Package Manager` > `+` > `Add package from disk`.
+4. Select and open the downloaded package json file (../unityPackage/onlineVR/package.json).
 
-## add to experiment logic
-follow example provided in Experimenthandler. Here we need to trigger the appropriate functions at the correct time
+![](../../assets/images/install1.png)
 
-** Testing connection**
-This code can be copied at beginning of Experiment procedure. Make sure whatever script handles the experiment flow has access to the ConnectionMeu and ConnectionHandler.cs
+### 2. Add ConnectionMenu Prefab
 
-[CODE FOR TEST CONNECTION]
+1. In your Unity project, open the scene where you want to integrate the onlineVR-toolbox functionality.
+2. In the `Project` window, navigate to the `onlineVR` package folder (path in Editor: `Packages/onlineVR`).
+3. Open the /Editor folder and locate the `ConnectionMenu` prefab. This prefab contains the UI elements for the connection menu and is already set up with the necessary scripts.
+4. Drag and drop the `ConnectionMenu` prefab into your scene hierarchy.
+
+### 3. Integrate into existing experiment logic
+
+To integrate the onlineVR-toolbox functionality into your existing Unity task, you need to ensure that the `ConnectionHandler.cs` script is called at the appropriate times in your experiment logic. Within the template project, this is done in the `ExperimentHandler.cs` script. You can follow a similar approach in your own project. We detail these steps in Step 1 and 2 of this notebook, where we show how to establish a connection with the web server and upload data.
+
+### 4. Configure with your web application
+To configure the onlineVR-toolbox to work with your web application, you need to set the server address in the `ConnectionHandler.cs` script. We go through this in detail in [Notebook 2](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Index.html), where we show how to set up the web application and configure the server address in the Unity project.
 
 
+### 5. Some additional notes and tips:
 
-**Uploading data**
+1. **Invariant Culture Setting**
+   We recommend setting the current culture to invariant culture in your Unity project. This ensures that data formatting is consistent across different systems and avoids issues with locale-specific formats (e.g., decimal points, date formats). You can do this by adding the following line of code at the start of your main script (also see `ExperimentHandler.cs` in the template project):
 
-- at the end of experiment of lock, use upload function to upoad data.
+```c#
+using System.Globalization;
 
-- Note on saving data. In this tutorial, we just uploaded prestored data. because we just wanted to test the data transfer functionality. We are looking for that dat at "persistent data path". You should store your data there as welll once you implement it. 
+// make sure that culture is set to invariant (for csv writing)
+CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+```
 
-
-That"s is! test your set up using 
