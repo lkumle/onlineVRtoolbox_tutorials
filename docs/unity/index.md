@@ -10,12 +10,7 @@ This notebook walks you through how to implement data transfer functionality wit
 
 We provide a **template Unity project** with the minimal setup required to communicate with a web application. This notebook explains the key components of that template and shows you how to replicate a basic working pipeline for data exchange between Unity and a server.
 
-We recommend beginning by replicating this minimal pipeline using:
-- [Step 1: GET request](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/GETrequest.html)
-- [Step 2: PUT request](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/PUTrequest.html)  
-(continued in Notebook 2)
-
-Once the pipeline is working in the template project, you can follow [Step 3: Integration](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/integrate.html) to add this functionality to your own Unity project.
+We recommend beginning by replicating this minimal pipeline. Once the pipeline is working in the template project, you can follow [Step 3: Integration](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/integrate.html) to add this functionality to your own Unity project.
 
 {: .new-title}
 > Get Started  
@@ -43,10 +38,10 @@ The template also includes a basic scene—an empty room—as a placeholder for 
 
 ### Key Components
 
-**`ExperimentHandler.cs`**  
+**ExperimentHandler.cs**  
 This script defines the overall experimental logic and sequence (e.g. blocks, trials). In the template, the sequence includes two placeholder blocks to simulate progression through an experiment. It also calls functions from the `ConnectionHandler.cs` script to manage data transfer such as testing the server connection or uploading data. 
 
-**ConnectionMenu & `ConnectionHandler.cs`**  
+**ConnectionMenu & ConnectionHandler.cs**  
 These elements implement the data transfer and are part of the provided onlineVR Unity package.  
 
 - The **ConnectionMenu** provides a simple UI that shows connection status and allows retrying the connection if needed. It also prevents the participant from proceeding until a connection is established.
