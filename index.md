@@ -1,7 +1,7 @@
 ---
-title: Overview and Quickstart
-layout: home
-nav_order: 1
+title: Overview and Quickstart  
+layout: home  
+nav_order: 1  
 ---
 
 # Running Virtual Reality Experiments Online: A Brief Introduction and Tutorial
@@ -9,77 +9,68 @@ nav_order: 1
 **Authors:** Levi Kumle, Alfie Brazier, Joel Kovoor, Johannes Keil, Anna C. Nobre & Dejan Draschkow
 
 ## Overview
-This website hosts step-by-step **practical Notebooks** accompanying the tutorial *Running Virtual Reality Experiments Online: A Brief Introduction and Tutorial*  and the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
 
-The aim of these Notebooks and the onlineVR-toolbox is to provide a solution for a core challenge of online data collection with VR: Implementing data transfer functionalities.    
+This website hosts step-by-step **practical notebooks** accompanying the tutorial *Running Virtual Reality Experiments Online: A Brief Introduction and Tutorial* and the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox).
 
-We recommend starting with reading the main tutorial paper for a high-level overview of the challenges of collecting data online for VR experiments. 
+The goal of the onlineVR-toolbox and these notebooks is to address a core challenge in online VR data collection: implementing data transfer functionality.
+
+We recommend starting with the main tutorial paper for a high-level overview of the unique challenges of conducting VR experiments online.
 
 {: .important-title}
 > Overview of provided resources
 >
-> Within these accompanying materials, we present a minimal pipeline that implements communication between a Unity task and a web application, enabling a Unity task to send and retrieve data through the internet. 
+> These materials present a minimal working pipeline that establishes communication between a Unity-based task and a web application.
 
-The materials consist of 3 Notebooks, each tackling a discrete part of the pipline:   
-  
-**Notebook 1:** Implementing data transfer functionalities within Unity  
-  
-**Notebook 2:** Setting up a web application that the Unity task can access
-  
-**Notebook 3:** Using decryption to ensure data security
+The resources consist of three notebooks, each covering a distinct part of the pipeline:
 
-These Noteboks go hand-in-hand with the resources provided within the onlineVR-toolbox. That is, together, they are designed to replicate a minimal pipline that sends (encrypted) data from a unity task to a web server where we can download it and decrypt it. 
+**Notebook 1:** Implementing data transfer functionality within Unity  
+**Notebook 2:** Setting up a web application that the Unity task can access  
+**Notebook 3:** Ensuring data security through encryption and decryption  
+
+Together with the provided Unity project and scripts in the onlineVR-toolbox, these notebooks guide you through replicating a complete pipeline that sends (encrypted) data from a Unity task to a web server, where it can be downloaded and decrypted.
 
 ## Requirements
-  
 
 {: .highlight}
-This is a self-contained tutorial: you can replicate the minial pipeline using only the provided materials.   
-  
+This is a fully self-contained tutorial—you can replicate the minimal working pipeline using only the materials provided.
 
-  
-You don't need your own Unity task/project to follow this tutorial. The task also does not need to be uploaded on Steam (ar another gamestore) or packaged as a build. 
-In fact, we recommend reading through the Notebooks first, and then replicating the pipleine with the resources provided here. This will make troubleshooting easier and allows you to get a sense of the involved steps. Once you have implemented a working pipeline, you can integrate the provided code and resources into your own Unity task. 
+You don’t need an existing Unity project or a published build (e.g., on Steam) to follow along. Everything you need is included.
 
-**Technical requirements:**  
+We recommend working through the notebooks and replicating the example pipeline before integrating it into your own VR task. This approach makes troubleshooting easier and gives you an understanding of the necessary components before diving into your own (more complex) use case.
 
-Replicating the minimal pipeline on your own machine requires you to have a running version of: 
-- Unity (Editor version 2022.3.59f1)
-- Jupyter Notebooks (or another Python environment)
+**Technical requirements:**
 
-We assume a basic understanding of Unity,  C#,  Python. However, replicating the minimal pipeline does not requrire you to do any coding yourself. 
-We provide preimplemented code for all steps, and we go through the steps of how to configure the provided code. 
+To replicate the pipeline locally, you’ll need:
 
-## Getting started
+- Unity (Editor version: **2022.3.59f1**)  
+- Jupyter Notebooks (or any Python environment)
 
-To get started, download the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox). 
+This tutorial assumes basic familiarity with Unity, C#, and Python. However, **no additional coding is required** to replicate the core functionality—we provide pre-implemented code for all steps and guide you through how to configure it.
+
+## Getting Started
+
+To begin, download the [onlineVR-toolbox](https://github.com/lkumle/onlineVR-toolbox).
 
 [Start with Notebook 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/){: .btn }
-
 
 ---
 
 {: .new-title }
-> Feedback and Contributions
+> Feedback and Contributions  
 >
-> This is a developing resource built with the intention to help other researchers to get their VR tasks online. We welcome contributions, suggestions and feedback to this work. 
+> This is an evolving resource created to support researchers who want to run VR experiments online. We welcome feedback, suggestions, and contributions.
 >
-> If you use this resource and encounter challenges, problems or solutions that are not covered within the materials provided here, we look forward to hearing from you so this resource can grow with the experience of our research community. 
+> If you encounter issues or develop improvements not covered in these materials, we’d love to hear from you so we can grow this resource with the growing experience of the community.
 
 ---
 
+## Get in Touch
 
-
-## Get in touch 
-Levi Kumle - levi.kumel@psy.ox.ac.uk  
-  
-Dejan Draschkow - dejan.draschkow@psy.ox.ac.uk
-  
-**Adaptive Behaviour & Cognition Lab**  - abclab@psy.ox.ac.uk   
-  
+Levi Kumle – levi.kumle@psy.ox.ac.uk  
+Dejan Draschkow – dejan.draschkow@psy.ox.ac.uk  
+**Adaptive Behaviour & Cognition Lab** – abclab@psy.ox.ac.uk  
 [https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition](https://www.psy.ox.ac.uk/research/adaptive-behaviour-cognition)
 
 ---
-
 
 ![](assets/images/logo.png)

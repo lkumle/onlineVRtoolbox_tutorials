@@ -1,64 +1,61 @@
 ---
-title: Notebook 1 – Data transfer in Unity 
-nav_order: 2
-layout: default
+title: Notebook 1 – Data Transfer in Unity  
+nav_order: 2  
+layout: default  
 ---
 
-# Notebook 1: Implementing data transfer functionality within Unity 
+# Notebook 1: Implementing Data Transfer Functionality in Unity
 
-In this notebook, we will walk through how to implement data transfer functionality inside a Unity project. 
+This notebook walks you through how to implement data transfer functionality within a Unity project.
 
-To do so, we created a template Unity project with the minimal required functionality. In this Notebook, we will first go through the implementation of the critical functionalities within this template project. We recommend first replicating this minimal pipeline by following Notebook 1 ([Step 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/GETrequest.html) and [Step 2](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/PUTrequest.html)) and Notebook 2. 
+We provide a **template Unity project** with the minimal setup required to communicate with a web application. This notebook explains the key components of that template and shows you how to replicate a basic working pipeline for data exchange between Unity and a server.
 
-Ultimately, the goal of this Notebook is to enable you to integrate the provided implementation into your own Unity project. Once you are able to send and receive data from the *template Unity task* to your web application by replicating the minimal pipeline, you can move on to integrating the provided functionality within your own Unity project by following [Step 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/integrate.html). 
+We recommend beginning by replicating this minimal pipeline using:
+- [Step 1: GET request](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/GETrequest.html)
+- [Step 2: PUT request](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/PUTrequest.html)  
+(continued in Notebook 2)
+
+Once the pipeline is working in the template project, you can follow [Step 3: Integration](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/integrate.html) to add this functionality to your own Unity project.
 
 {: .new-title}
-> Get started
-> 
-> To get started, download and open the "onlineTask_template" Unity project within the Unity Editor.
+> Get Started  
+>
+> To begin, open the **"4_unityTemplateTask"** project in the Unity Editor.
 
---- 
---- 
+---
 
-## Overview of template Unity task
+### Overview of the Template Unity Task
 
-First, we will go through the overall pipeline by looking at the Unity template task. This is already set up - so we will just explore. 
+First, we’ll explore the Unity template project and its structure. This project is already set up to demonstrate the basic data transfer workflow, so no additional configuration is needed at this stage.
 
-Let's familiarise ourselves with the Unity project, starting with the hierarchy inside the Unity Editor. 
+The two key components in the Unity hierarchy are:
 
-In this provided template project, two components are important (you can find both in the hierarchy of the Unity Editor; also see Figure below):
-- ExperimentHandler game object (and the attached `ExperimentHandler.cs` script)
-- ConnectionMenu Prefab (and the attached `ConnectionHandler.cs` script)
+- **ExperimentHandler** GameObject  
+  – With the attached `ExperimentHandler.cs` script  
+- **ConnectionMenu** Prefab  
+  – With the attached `ConnectionHandler.cs` script
 
 ![](../../assets/images/unity0.png)
 
-Additionally, we added a "basic scene" which is just an empty room as a stand-in for the actual task environment. 
-
+The template also includes a basic scene—an empty room—as a placeholder for your actual experimental environment.
 
 ---
 
-Let's explore how both the ExperimentHandler (and the attached `ExperimentHandler.cs` script) and the ConnectionMenu Prefab (and the attached `ConnectionHandler.cs` script) work together to implement data transfer functionalities!
+### Key Components
 
+**`ExperimentHandler.cs`**  
+This script defines the overall experimental logic and sequence (e.g. blocks, trials). In the template, the sequence includes two placeholder blocks to simulate progression through an experiment. It also calls functions from the `ConnectionHandler.cs` script to manage data transfer such as testing the server connection or uploading data. 
 
+**ConnectionMenu & `ConnectionHandler.cs`**  
+These elements implement the data transfer and are part of the provided onlineVR Unity package.  
 
-**ExperimentHandler**
+- The **ConnectionMenu** provides a simple UI that shows connection status and allows retrying the connection if needed. It also prevents the participant from proceeding until a connection is established.
+- The **`ConnectionHandler.cs`** script includes preconfigured functions for:
+  - Sending **GET** requests (e.g. to test the connection and retrieve a subject number)
+  - Sending **PUT** requests (e.g. to upload data at the end of a block or experiment)
 
-The `ExperimentHandler.cs` script attached to the ExperimentHandler game object defines the overall experimental logic and sequence. That is, this script handles the sequential logic of defining blocks, trials, etc. Within the template project, we created a minimal experimental sequence of just two empty blocks (nothing is happening besides uploading a preexisting data file) as a stand-in for the actual experimental logic. 
-
-Within this file, we then call the appropriate functions at the required time from the ConnectionHandler.cs script to test the connection and upload data. 
-
-**ConnectionMenu and ConnectionHandler.cs**  
-
-The ConnectionMenu and `ConnectionHandler.cs` are part of the implementation we share in the onlineVR Unity package. This code handles the actual data transfer and is preconfigured.   
-
-In the ConnectionMenu, we have a simple UI that displays the connection status and allows the user to retry connecting if needed. Displaying this UI menu at the start of the experiment additionally ensures that the participant cannot advance to the main experiment until an internet connection is established. 
-
-The attached `ConnectionHandler.cs` contains functions that handle the actual data transfer. This includes sending GET requests to the web application to test the connection and assigning a subject number, as well as sending PUT requests to upload data at specified times (e.g., at the end of the experiment or block). We will go through these functions in detail in the next steps.
-
-
+We’ll review these functions and scripts in detail in the following steps.
 
 ![](../../assets/images/unity1.png)
 
-
-[Continue with next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }
-
+[Continue to the next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }

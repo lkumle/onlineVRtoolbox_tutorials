@@ -6,22 +6,22 @@ parent: Notebook 1 – Data transfer in Unity
 
 ## Uploading data to the web application
 
-Now that we’ve established a connection with the web server and retrieved a subject number, we’re ready to start the experiment.
+Once we’ve established a connection with the web server and retrieved a subject number, we’re ready to start the actual experiment.
 
-Let’s assume a simple experiment structure with two blocks. After each block, we want upload the data we recorded to the web application. To do this, we'll use a PUT request, which is typically used to send data to a server—in our case, the data recorded during each block.
+Let’s assume a simple experiment structure with two blocks (as implemented in the template project). After each block, we want upload the data we recorded to the web application. To do this, we'll use a PUT request, which is typically used to send data to a server—in our case, the data recorded during each block.
 
 We’ll handle the upload via the `ConnectionHandler.UploadData()` method, which we'll call from within `ExperimentHandler.cs.`
 
 
 ### Storing data locally before uploading
 
-Before we upload anything, we first need to store the data locally on the participant’s device. The upload function expects data to be saved as a .csv file.
+Before we upload anything, we first need to store the data locally on the participant’s device. 
 
 **To do this:**  
 - We’ll create one CSV file per block of the experiment.
-- These files will be stored in Unity’s **persistent data path** —a platform-specific folder where applications downloaded from a game store have permission to write data. It’s typically used for things like save files or settings; in our case, we’ll use it to store experimental data.
+- These files will be stored in Unity’s **persistent data path** —a platform-specific folder where applications downloaded from a game store have permission to write data. It’s typically used for things like saveing game progress or settings; in our case, we’ll use it to store experimental data.
 
-An example implementation is included in ExperimentHandler.cs. The snippet below shows how to:
+An example implementation is included in `ExperimentHandler.cs`. The snippet below shows how to:
 
 1. Create a new file in the persistent data path.
 2. Write data into the file for the current block.
@@ -78,7 +78,7 @@ Once the block is complete and the data file has been written and closed, we tri
     ConnectionHandler.UploadData(fileName, filePath); // upload data to server
 
 ```
-This sends the CSV file to the web application via a PUT request.
+This sends the (encrypted) data to the web application via a PUT request.
 
 ---
 ---
@@ -92,7 +92,7 @@ Note that we will explore the encryption process in more detail in [Notebook 3](
 **Explanation:**
 1. Retrieves the file name and reads the stored experiment data from the specified file path on participants device.
 2. Encrypts the  data.
-3. Combines the file name and encrypted data into a single byte array for uploading.
+3. Combines the file name and encrypted data into a single byte array for uploading (see [Notebook 2, Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html) for details on handling file names during the upload).
 4. Sends a PUT request to the server with the combined data.
 5. If there is a network or HTTP error, the function retries the upload (recursive call).
 

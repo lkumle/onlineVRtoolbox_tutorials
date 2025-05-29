@@ -58,12 +58,31 @@ If the connection test fails, the experiment is halted early to avoid running a 
 ---
 ---
 
-### Detail: `testConnection()` function
-In case you are simply trying to use the onlineVR-toolbox or replicating the minimal pipeline, learning how to call the relevant functions within your experimental logic might be all you need to know. However, if you are interested in how the `testConnection()` routine works, let's have a look at it in detail.
+### Detail: `testConnection()` Function
 
-The routine starts by initiating a GET request to the specified server address. It then waits for the request to complete. If there's a network or HTTP error (e.g., the server is unreachable), it shows a failure message ("Connection failed. Retrying...") on the ConnectionMenu UI and automatically retries the connection after a short delay (4 seconds). The retry mechanism is limited to a maximum of 3 attempts. If all attempts fail, it displays a message indicating that the connection could not be established ("Connection failed. There may be a problem with our servers, try again later."). At t
+If you're primarily interested in using the **onlineVR-toolbox** or replicating the minimal pipeline, understanding how to call the relevant functions within your experiment's logic might be all you need. However, if you're curious about how the `testConnection()` function works, here’s a detailed breakdown.
 
-If the connection succeeds, it stores the servers response (which we will define in [Notebook 2](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Index.html)), and extracts the subject ID (`queriedID`)and encryption key (`encryptionKey`) from the response,  sets the `connectionOK` flag to true, which indicates that the connection was successful, and finally disables the connection menu UI (as it is no longer needed). This allows the experiment to proceed with the assigned subject number and encryption key.
+The `testConnection()` routine handles the initial communication with the web server by sending a **GET request** to a predefined address. This is the first step in verifying that the participant has a working internet connection and can retrieve a subject number and encryption key.
+
+#### What the function does:
+
+1. **Sends a GET request** to the server.
+2. **Waits for the server’s response.**
+3. If the request fails (due to a network or HTTP error, such as the server being unreachable), it:
+   - Displays a failure message on the `ConnectionMenu` UI:  
+     `"Connection failed. Retrying..."`
+   - Waits for 4 seconds, then **automatically retries the connection**, up to a maximum of **3 attempts**.
+   - If all attempts fail, it shows:  
+     `"Connection failed. There may be a problem with our servers. Try again later."`
+
+4. If the request **succeeds**, the function:
+   - Parses the server's response (as defined by us in [Notebook 2](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Index.html))
+   - Extracts the **subject ID** (`queriedID`) and **encryption key** (`encryptionKey`)
+   - Sets the `connectionOK` flag to `true`, indicating a successful connection which we can check using `ConnectionHandler.connectionCheck()` (see above code snippet).
+   - Disables the `ConnectionMenu` UI so that the experiment can continue
+
+This ensures that the experiment does not proceed unless a stable connection has been established and the participant has been assigned a valid subject ID and encryption key.
+
 
 ```c#
 
