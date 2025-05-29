@@ -33,6 +33,6 @@ To use AES encryption correctly, we need:
 > This Notebook assumes that you have successfully implemented (or read) the steps outlines in Notebook 1 and 2. 
 > 1. Follow Step 1 to explore how the data is encrypted within Unity using the onlineVR-toolbox.
 > 2. Follow Step 2 to learn how to decrypt any transferred data once it is downloaded from the web server. 
-s
+
 
 [Continue with Step 1](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/encryption.html){: .btn }
