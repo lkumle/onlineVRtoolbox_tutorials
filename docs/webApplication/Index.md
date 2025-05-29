@@ -25,7 +25,7 @@ While we could run our Bottle web application on any server, using platforms suc
 {: .new-title }
 > Getting Started:
 >
-> 1. Download the "web app" matrials provided at [GitHub](https://github.com/lkumle/onlineVR-toolbox)
+> 1. Download the "2_webAppFiles" matrials provided at [GitHub](https://github.com/lkumle/onlineVR-toolbox)
 > 2. Follow Steps 1-4 below
 
 

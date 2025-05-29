@@ -14,18 +14,19 @@ Let's start with a high-level overview of the setup provided within this tutoria
 We need the web application to respond to the following requests made by our Unity experiments (also see Notebook 1):
 
 - Establish a connection with the Unity experiment following a GET request
-- Assign a unique subject number to each participant as part of the GET request
+- Assign a unique subject number to each participant (and the encryption key) as part of the GET request
 - Receive and store data from the Unity task following a PUT request
 
 
 ![](../../assets/images/bottle_app.png)
 
-
+---
+---
 **GET endpoint**  
 
 The GET method is used to retrieve data on a server. In our case, we are using it to retrieve a subject number as well as a confirmation that the connection is established. To enable this, our Bottle application includes a get endpoint. 
 
-Following a GET request from the testConnection() in our Unity experiment, the web application first retrieves (and increments) a subject number (also see get_next_id() fuction in bottle_app.py script). Then, this subject number is returned within a response message that is returned to testConnection(). 
+Following a GET request from the `testConnection()` in our Unity experiment, the web application first retrieves (and increments) a subject number (also see `get_next_id(` function in `bottle_app.py` script). Then, this subject number is returned within a response message that is returned to `testConnection()`. 
 
 Note that the response message also returns an encryption key. For more information on encryption within the onlineVR-toolbox, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
 
@@ -36,7 +37,7 @@ Note that the response message also returns an encryption key. For more informat
 @application.get('/')
 def welcome():
     """
-    Handles GET requests. Allocates a unique ID and returns a response.
+    Handles GET requests. Allocates a unique ID and encryption key and returns a response.
     """
     # get updated ID
     allocated_id = get_next_id()
@@ -47,12 +48,13 @@ def welcome():
     return response_message
 ```
 
+--- 
+--- 
 **PUT endpoint**    
-
 
 The PUT method is used to creates a new resource (e.g., file) on the server with the content included in the request. In our case, we are using it to transfer and store the experiment data. 
 
-Following a PUT request from Upload() within our Unity experiment, our web applications first reads the content (i.e., encrypted data) included in the request, extracts the file name (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html)) and writes the retrieved data to the specified file path. 
+Following a PUT request from `Upload()` within our Unity experiment, our web applications first reads the content (i.e., encrypted data) included in the request, extracts the file name (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html)) and writes the retrieved data to the specified file path. We will configure this file path in the next step below. 
 
 ```python
 # =============================================== #
@@ -83,11 +85,13 @@ def save_data():
 ---
 ---
 ## Configure on pythonanywhere
-  
 
-**1. Navgate to application files**
-1. Navigate to the "files" tab. 
-2. Within files, navigate to *mysite/*. 
+Great, now that we have an overview of the Bottle application, let's configure it on PythonAnywhere.
+To set up the Bottle application on PythonAnywhere, we will follow these steps:
+
+**1. Navigate to application files**
+1. Navigate to the "files" tab.
+2. Within files, navigate to *mysite/*.
 
 ![](../../assets/images/server4.png)
 
@@ -96,7 +100,7 @@ def save_data():
 
 Inside the mysite/ directory:
 - Open the existing bottle_app.py file.
-- Replace its content with the code from the provided bottle_app.py script.
+- Replace its content with the code from the provided `bottle_app.py` script.
 - Save and close the file.
 
 ---

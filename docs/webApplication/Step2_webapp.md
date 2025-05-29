@@ -28,7 +28,10 @@ If you are using the provided bottle app script, select the following to configu
 In "Quickstart new Bottle project", do not modify the default path. The path should look like the example below. 
    
 
-**Note:** "TutorialTemplate" is the PythonAnywhere account name used for this tutorial. In your case, it will display your own account name.
+{: .highlight-title}
+> Note
+>
+> “TutorialTemplate” is the PythonAnywhere account name used for this tutorial. In your case, it will display your own account name.
 
 ![](../../assets/images/server2.png)
 
@@ -38,7 +41,7 @@ In "Quickstart new Bottle project", do not modify the default path. The path sho
 Once the setup is complete, you will be redirected to a web app configuration page similar to the one below.
 
 {: .highlight}
-At the top, you will see your web address. You will need to use this exact URL in your experiment code (see Notebook 1: Configure Unity Code).
+At the top, you will see your web address. You will need to use this exact URL in your experiment code later (see [Step 5](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step5_testSetup.html) within this Notebook)
 
 ![](../../assets/images/server3.png)
  
