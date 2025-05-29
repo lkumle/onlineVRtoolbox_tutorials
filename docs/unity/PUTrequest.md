@@ -1,7 +1,7 @@
 ---
 title: Step 2 - Upload data to web application
 layout: default
-parent: Notebook 1 – Data transfer in Unity 
+parent: Notebook 1 – Data Transfer in Unity  
 ---
 
 ## Uploading data to the web application

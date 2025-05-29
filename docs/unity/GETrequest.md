@@ -1,7 +1,7 @@
 ---
 title: Step 1 - Recieve data from web application
 layout: default
-parent: Notebook 1 – Data transfer in Unity 
+parent: Notebook 1 – Data Transfer in Unity  
 ---
 
 
