@@ -15,7 +15,7 @@ If you're just replicating the overall pipeline, feel free to test it with the p
 
 
 ## Overview
-To use the `Encrypt()` function, our unity app needs access the key piece of information: the **encryption key**.   
+To use the `Encrypt()` function, our Unity experiment needs access the key piece of information: the **encryption key**.   
 
 The encryption key needs to be specified within our web application – this way we ensure that it is not included in any code we publicly share. Have a look at the `encryption_key` variable within the bottle_app.py script. 
 

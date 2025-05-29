@@ -6,15 +6,16 @@ parent: Notebook 3 – Encryption and Decryption
 
 ## Decrypting Received Data
 
-Here, we assume that you sucessfully recieved the encrypted data.  After downloading the encrypted data from the server, we need to decrypt it before we can use it for analysis. 
-To simplify this process, we provide an implementation in a Python notebook that is complementary to the encryption algorithm provided in the `Encrypt()` function in `ConnectionHandler.cs`. 
+Here, we assume that you successfully received the encrypted data. After downloading the encrypted data from the server, we need to decrypt it before we can use it for analysis.
 
-You can dowload the Jupyter Notebook here: [GitHub](https://github.com/lkumle/onlineVR-toolbox). 
+To simplify this process, we provide an implementation in a Jupyter notebook that is complementary to the encryption algorithm provided in the `Encrypt()` function in `ConnectionHandler.cs`.
+
+You can download the Jupyter Notebook here: [GitHub](https://github.com/lkumle/onlineVR-toolbox).
 
 
 **1. Download data from PythonAnywhere**
-  
-To download the data, go the the Filees tab in python anywhere. Navigate to /mysite/files/. The download the recieved data. 
+
+To download the data, go the the Files tab in python anywhere. Navigate to /mysite/files/. Then download the received data.
 
 
 ![](../../assets/images/downloadData.png)
@@ -23,7 +24,7 @@ To download the data, go the the Filees tab in python anywhere. Navigate to /mys
 
 **2. Configure the Jupyter Notebook**  
 
-To decrypt the data, we first need to configure the jupyter notebook. Most importantly, we need to specify the encryption key. That is, the same key we entered within the Bottle_app.py web appplicatuon script. 
+To decrypt the data, we first need to configure the jupyter notebook. Most importantly, we need to specify the encryption key. That is, the same key we entered within the `bottle_app.py` web appplicatuon script. 
 
 
 To use the decryption script, follow these steps:
