@@ -8,7 +8,7 @@ parent: Notebook 2 – Web Application
 
 Now that we've deployed a basic web application, the next step is to configure it to provide the required functionality.
   
-Let's start with a high-level overview of the setup provided within this tutorial. Then , we will go through the specifics of configuring the pre-implemented Bottle application on pythonanywhere. 
+Let's start with a high-level overview of the setup provided within this tutorial. Then, we will go through the specifics of configuring the pre-implemented Bottle application on pythonanywhere. 
  
 ## Overview
 We need the web application to respond to the following requests made by our Unity experiments (also see Notebook 1):
@@ -24,7 +24,7 @@ We need the web application to respond to the following requests made by our Uni
 ---
 **GET endpoint**  
 
-The GET method is used to retrieve data on a server. In our case, we are using it to retrieve a subject number as well as a confirmation that the connection is established. To enable this, our Bottle application includes a get endpoint. 
+The GET method is used to retrieve data on a server. In our case, we are using it to retrieve a subject number (and encryption key), as well as a confirmation that the connection is established. To enable this, our Bottle application includes a get endpoint. 
 
 Following a GET request from the `testConnection()` in our Unity experiment, the web application first retrieves (and increments) a subject number (also see `get_next_id(` function in `bottle_app.py` script). Then, this subject number is returned within a response message that is returned to `testConnection()`. 
 
@@ -100,13 +100,13 @@ To set up the Bottle application on PythonAnywhere, we will follow these steps:
 
 Inside the mysite/ directory:
 - Open the existing bottle_app.py file.
-- Replace its content with the code from the provided `bottle_app.py` script.
+- Replace its content with the code from the provided `bottle_app.py` [script](https://github.com/lkumle/onlineVR-toolbox/blob/main/2_webAppFiles/bottle_app.py).
 - Save and close the file.
 
 ---
 **3. Upload Supporting Files and Directories**  
 
-1. Upload the provided ID.txt file to the mysite/ directory (using the "Upload a file" button). 
+1. Upload the provided id.txt file to the mysite/ directory (using the "Upload a file" button). 
 This file keeps track of assigned subject numbers, allowing the web application to generate unique IDs for each participant. 
 2. Create a new directory named *files/* inside mysite/. 
 This is where the web application will store incoming data. 

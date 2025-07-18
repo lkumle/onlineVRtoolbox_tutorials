@@ -10,12 +10,12 @@ parent: Notebook 1 – Data Transfer in Unity
 Before participants begin the experiment, we first need to establish a connection with the server. This serves two purposes:
 
 1. Ensure internet connectivity, so we know data uploads will be possible later.
-2. Retrieve a unique subject number for the participant from the server (along with an encryption key—see Notebook 3 for details).
+2. Retrieve a unique subject number for the participant from the server (along with an encryption key, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html) for details).
 
-To do this, we use a GET request—a standard HTTP request used to retrieve data from a server. In our case, we send a GET request to the web application, and the server responds with a subject number (and encryption key).
+To do this, we use a GET request, a standard HTTP request used to retrieve data from a server. In our case, we send a GET request to our web application, which responds with a subject number (and encryption key).
 
 ### How It Works in the Template Project
-We begin the experiment by testing the connection. This is handled in ExperimentHandler.cs and follows this basic logic:
+We begin the experiment by establishing and testing the connection. This is handled in ExperimentHandler.cs and follows this basic logic:
 
 1. **Show the connection menu** to inform the participant (this will automatically disappear once the connection is established)
 2. **Call testConnection()** from ConnectionHandler.cs to send the GET request.

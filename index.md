@@ -19,7 +19,7 @@ We recommend starting with the main tutorial paper for a high-level overview of 
 {: .important-title}
 > Overview of provided resources
 >
-> These materials present a minimal working pipeline that establishes communication between a Unity-based task and a web application.
+> The materials included in these notebooks provide a minimal working pipeline that establishes communication between a Unity-based task and a web application.
 
 The resources consist of three notebooks, each covering a distinct part of the pipeline:
 
@@ -27,7 +27,7 @@ The resources consist of three notebooks, each covering a distinct part of the p
 **Notebook 2:** Setting up a web application that the Unity task can access  
 **Notebook 3:** Ensuring data security through encryption and decryption  
 
-Together with the provided Unity project and scripts in the onlineVR-toolbox, these notebooks guide you through replicating a complete pipeline that sends (encrypted) data from a Unity task to a web server, where it can be downloaded and decrypted.
+Together with the materials in the onlineVR-toolbox, these notebooks guide you through replicating a complete pipeline that sends (encrypted) data from a Unity task to a web server, where it can be downloaded and decrypted.
 
 ## Requirements
 
@@ -45,7 +45,7 @@ To replicate the pipeline locally, you’ll need:
 - Unity (Editor version: **2022.3.59f1**)  
 - Jupyter Notebooks (or any Python environment)
 
-This tutorial assumes basic familiarity with Unity, C#, and Python. However, **no additional coding is required** to replicate the core functionality—we provide pre-implemented code for all steps and guide you through how to configure it.
+This tutorial assumes basic familiarity with Unity, C#, and Python. However, **no coding is required** to replicate the core functionality—we provide pre-implemented code for all steps and guide you through how to configure it.
 
 ## Getting Started
 

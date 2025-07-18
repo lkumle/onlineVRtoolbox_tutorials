@@ -13,12 +13,13 @@ However, let’s quickly discuss how filenames are handled and transferred (both
 
 ![](../../assets/images/server6.png)
 
-**Adding a filename to transferred data**
+**Adding a filename to transferred data**  
+
 To forward a filename from Unity to our web application on Pythonanywhere, we can embed the filename within the encrypted data before uploading it. This effectively makes the filename a "header" in the byte stream.
 
 The filename in the provided Unity project is formatted as `onlineVR_{subID}_{timestamp}_B{block}`, where {subID} is the assigned subject number, {timestamp} represents the time the data files was creates, and {block} codes the block number since we are uploading data afetr every block.
 
-Within the `Upload()` function, we simply retrieve the filename specified in `ExperimentHandler.cs`, and add it to the data that is transferred to our web application.
+Within the `Upload()` function in the `ConnectionHandler.cs`, we simply retrieve the filename specified in `ExperimentHandler.cs`, and add it to the data that is transferred to our web application.
 
 ---
 **How the Bottle App Processes Filenames**

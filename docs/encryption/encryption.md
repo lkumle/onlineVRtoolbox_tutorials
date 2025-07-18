@@ -57,7 +57,7 @@ Afterwards, we recommend navigating to the "Web"-tab on Pythonanywhere and click
 
 ## Details for `Encrypt()`-function
 
-For detais on the `Encrypt()`-function, see below and the `ConnectionHandler.cs` script with in the Unity template (also see Notebook 1 for details on the `ConnectionHandler.cs`). 
+For detais on the `Encrypt()`-function, see below and the `ConnectionHandler.cs` script within the Unity template (also see Notebook 1 for details on the `ConnectionHandler.cs`). 
 
 ```c#
 public byte[] Encrypt(byte[] data)

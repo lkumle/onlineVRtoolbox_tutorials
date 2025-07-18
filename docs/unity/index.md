@@ -6,11 +6,11 @@ layout: default
 
 # Notebook 1: Implementing Data Transfer Functionality in Unity
 
-This notebook walks you through how to implement data transfer functionality within a Unity project.
+This notebook covers how to implement data transfer functionality within a Unity project.
 
 We provide a **template Unity project** with the minimal setup required to communicate with a web application. This notebook explains the key components of that template and shows you how to replicate a basic working pipeline for data exchange between Unity and a server.
 
-We recommend beginning by replicating this minimal pipeline. Once the pipeline is working in the template project, you can follow [Step 3: Integration](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/integrate.html) to add this functionality to your own Unity project.
+We recommend [downloading](https://github.com/lkumle/onlineVR-toolbox) and opening the template project to follow along. Once the pipeline is working in the template project, you can follow [Step 3: Integration](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/integrate.html) to add this functionality to your own Unity project.
 
 {: .new-title}
 > Get Started  
@@ -53,4 +53,4 @@ We’ll review these functions and scripts in detail in the following steps.
 
 ![](../../assets/images/unity1.png)
 
-[Continue to the next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step2_webapp.html){: .btn }
+[Continue to the next step](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/unity/GETrequest.html){: .btn }

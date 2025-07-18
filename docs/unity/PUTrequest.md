@@ -19,7 +19,7 @@ Before we upload anything, we first need to store the data locally on the partic
 
 **To do this:**  
 - We’ll create one CSV file per block of the experiment.
-- These files will be stored in Unity’s **persistent data path** —a platform-specific folder where applications downloaded from a game store have permission to write data. It’s typically used for things like saveing game progress or settings; in our case, we’ll use it to store experimental data.
+- These files will be stored in Unity’s **persistent data path**, a platform-specific folder where applications downloaded from a game store have permission to write data. It’s typically used for e.g.,  saving game progress or settings; in our case, we’ll use it to store experimental data.
 
 An example implementation is included in `ExperimentHandler.cs`. The snippet below shows how to:
 
@@ -31,8 +31,7 @@ An example implementation is included in `ExperimentHandler.cs`. The snippet bel
 > 
 > To avoid overwriting data when multiple participants upload files, we use the following filename format: *onlineVR_{subjectNumber}_{datetime}_B{block}.csv*  
 > This ensures each file is uniquely identifiable on the server. Feel free to adjust the naming convention to suit your needs, but make sure it remains unique for each participant and block/upload.
->
-> See Notebook 2 for details on how to set up the web application to handle these files.
+
 
 ```c#
 
@@ -65,7 +64,7 @@ An example implementation is included in `ExperimentHandler.cs`. The snippet bel
     }
 ```
 
-### Storing data locally before uploading
+### Uploading data to the web application
 
 Once the block is complete and the data file has been written and closed, we trigger the upload by calling:
 
@@ -84,12 +83,12 @@ This sends the (encrypted) data to the web application via a PUT request.
 ---
 
 ### Detail: `Upload()` function
-Let's also explore this function in a bit more detail. This is not necessary if you simply want to use the provided function. In case you are interested or want to build on the provided code, let's have a look at the `Upload()` function in the `ConnectionHandler.cs` file.
+In case you are interested or want to build on the provided code, let's have a look at the `Upload()` function in the `ConnectionHandler.cs` file. You can skip this section if you simply want to use the provided function.
 
 Note that we will explore the encryption process in more detail in [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html), but for now, we will assume that the `Encrypt()` function is defined and works as intended.
 
 
-**Explanation:**
+#### What the function does:
 1. Retrieves the file name and reads the stored experiment data from the specified file path on participants device.
 2. Encrypts the  data.
 3. Combines the file name and encrypted data into a single byte array for uploading (see [Notebook 2, Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html) for details on handling file names during the upload).

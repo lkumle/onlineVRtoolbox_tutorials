@@ -27,9 +27,9 @@ Let's finalise the set up and test whether everything is working as expected. He
 ---
 ### 2. Run project in Unity
 
-Run the Unity project withinthe Editor. As a reminder, the `ExperimentHandler.cs` script runs two "blocks" of the experiment that are empty and do not do anthing, but it will call the `ConnectionHandler` upload data files at the end of each block.
+Run the Unity project within the Editor. As a reminder, the `ExperimentHandler.cs` script runs two "blocks" of the experiment that are empty and do not do anthing, but it will call the `ConnectionHandler` upload data files at the end of each block.
 
-If sucessful, teh connection will be established quite quickly, meaning that you will probably not see the menu appear. If you do see the connection menu, it will disappear once the connection is established.
+If successful, the connection will be established quite quickly, meaning that you will probably not see the menu appear. If you do see the connection menu, it will disappear once the connection is established.
 
 You should also see the following messages in the console:
 
