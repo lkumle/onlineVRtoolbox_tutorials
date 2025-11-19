@@ -1,6 +1,9 @@
 title: onlineVR toolbox 
 description: Here you can find practical notebooks for the onlineVR toolbox.
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
 
 url: https://lkumle.github.io/onlineVRtoolbox_tutorials/
 
