@@ -1,14 +1,14 @@
 ---
 title: Step 2 - Uploading to Steam
 layout: default
-parent: Notebook 1 – Creating and uploading a Unity application
+parent: Notebook 4 – Creating and uploading a build
 ---
 
 ## Uploading the experiment to Steam
 
 On this page, we go over the general steps of uploading an experiment/build to Steam. Instead of detailing every step, we focus on a broader overview and link to detailed resources along the way — we believe these resources explain the process better than we would be able to here. Our hope is that this notebook will provide the necessary context to successfully navigate these additional resources.
 
-#### Overview of the Steam Ecosystem
+### Overview of the Steam Ecosystem
 
 Navigating the Steam ecosystem involves three components, each serving a different role for developers and players:
 
@@ -28,7 +28,7 @@ We *do* need to download the Steam SDK because it includes the Steamworks upload
 
 ![](../../assets/images/SteamEco.png)
 
-#### Getting Started
+### Getting Started
 
 Below, we summarise the most important steps for getting started with the Steam ecosystem. For a comprehensive overview, see Steam Documentation: [Getting Started](https://partner.steamgames.com/doc/gettingstarted) and [Onboarding](https://partner.steamgames.com/doc/gettingstarted/onboarding).
 
@@ -63,7 +63,7 @@ Thus, setting up the Store Page mainly serves two purposes:
 
 Finally, you will need to submit the Store Page for review. Steam administrators may return your submission with comments or required changes before the page can go live. Because of this review process (and the 14-day “coming soon” requirement), we recommend starting the Store Page early.
 
-#### Uploading the build
+### Uploading the build
 
 Once you have registered with Steamworks, set up a Store Page, and created a working build of your experiment, the final step is uploading the build to Steam.
 

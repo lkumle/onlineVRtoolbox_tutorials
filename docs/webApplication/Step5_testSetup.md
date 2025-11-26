@@ -37,9 +37,9 @@ You should also see the following messages in the console:
 
 
 ---
-### 3. Check if data has arrived on pythonanywhere server
+### 3. Check if data has arrived on PythonAnywhere server
 
-1. Log in to your pythonanywhere account.
+1. Log in to your PythonAnywhere account.
 2. Navigate to the "Files" tab and then navigate to the directory where your data files are stored (e.g., `/home/yourusername/mysite/files/`).
 3. You should see the uploaded data files (e.g., `onlineVR_000001_2025-05-28_18-21_B1.bytes` and `onlineVR_000001_2025-05-28_18-21_B2.bytes`) in this directory.
 

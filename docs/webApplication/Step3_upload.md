@@ -8,7 +8,7 @@ parent: Notebook 2 – Web Application
 
 Now that we've deployed a basic web application, the next step is to configure it to provide the required functionality.
   
-Let's start with a high-level overview of the setup provided within this tutorial. Then, we will go through the specifics of configuring the pre-implemented Bottle application on pythonanywhere. 
+Let's start with a high-level overview of the setup provided within this tutorial. Then, we will go through the specifics of configuring the pre-implemented Bottle application on PythonAnywhere. 
  
 ## Overview
 We need the web application to respond to the following requests made by our Unity experiments (also see Notebook 1):
@@ -24,9 +24,9 @@ We need the web application to respond to the following requests made by our Uni
 ---
 **GET endpoint**  
 
-The GET method is used to retrieve data on a server. In our case, we are using it to retrieve a subject number (and encryption key), as well as a confirmation that the connection is established. To enable this, our Bottle application includes a get endpoint. 
+The GET method is used to retrieve data on a server. In our case, we are using it to retrieve a subject number (and encryption key), as well as a confirmation that the connection is established. To enable this, our Bottle application includes a GET endpoint. 
 
-Following a GET request from the `testConnection()` in our Unity experiment, the web application first retrieves (and increments) a subject number (also see `get_next_id(` function in `bottle_app.py` script). Then, this subject number is returned within a response message that is returned to `testConnection()`. 
+Following a GET request from the `testConnection()` in our Unity experiment, the web application first retrieves (and increments) a subject number (also see `get_next_id()` function in `bottle_app.py` script). Then, this subject number is returned within a response message that is returned to `testConnection()`. 
 
 Note that the response message also returns an encryption key. For more information on encryption within the onlineVR-toolbox, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
 
@@ -52,7 +52,7 @@ def welcome():
 --- 
 **PUT endpoint**    
 
-The PUT method is used to creates a new resource (e.g., file) on the server with the content included in the request. In our case, we are using it to transfer and store the experiment data. 
+The PUT method is used to create a new resource (e.g., file) on the server with the content included in the request. In our case, we are using it to transfer and store the experiment data. 
 
 Following a PUT request from `Upload()` within our Unity experiment, our web applications first reads the content (i.e., encrypted data) included in the request, extracts the file name (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html)) and writes the retrieved data to the specified file path. We will configure this file path in the next step below. 
 
@@ -84,7 +84,7 @@ def save_data():
 
 ---
 ---
-## Configure on pythonanywhere
+## Configure on PythonAnywhere
 
 Great, now that we have an overview of the Bottle application, let's configure it on PythonAnywhere.
 To set up the Bottle application on PythonAnywhere, we will follow these steps:

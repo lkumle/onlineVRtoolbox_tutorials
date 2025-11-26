@@ -1,6 +1,6 @@
 ---
-title: Notebook 4 – Creating and uploading a Unity application
-nav_order: 2  
+title: Notebook 4 – Creating and uploading a build
+nav_order: 5 
 layout: default  
 ---
 

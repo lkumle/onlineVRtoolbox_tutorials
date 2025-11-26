@@ -31,7 +31,7 @@ Conditions = new StreamReader(
 For further information, also see [Unity Documentation: Include additional files in a build](https://docs.unity3d.com/6000.2/Documentation/Manual/StreamingAssets.html). 
 
 
-#### Writing files
+### Writing files
  
 For saving data to file, Unity provides “Application.persistentDataPath” (also see Notebook 1 for an example), which points to a system-specific location where the build is allowed to store files. In typical game development, this path might be used to save (and later load) progress within a game. When conducting remote VR studies, we can use it to write any experiment data to file, which we can later upload to our server. 
 

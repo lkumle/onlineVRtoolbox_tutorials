@@ -8,7 +8,7 @@ parent: Notebook 1 – Data Transfer in Unity
 
 Once we’ve established a connection with the web server and retrieved a subject number, we’re ready to start the actual experiment.
 
-Let’s assume a simple experiment structure with two blocks (as implemented in the template project). After each block, we want upload the data we recorded to the web application. To do this, we'll use a PUT request, which is typically used to send data to a server—in our case, the data recorded during each block.
+Let’s assume a simple experiment structure with two blocks (as implemented in the template project). After each block, we want to upload the data we recorded to the web application. To do this, we'll use a PUT request, which is typically used to send data to a server—in our case, the data recorded during each block.
 
 We’ll handle the upload via the `ConnectionHandler.UploadData()` method, which we'll call from within `ExperimentHandler.cs.`
 

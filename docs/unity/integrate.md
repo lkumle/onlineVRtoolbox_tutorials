@@ -35,6 +35,9 @@ This typically involves two main steps: establishing a connection at the start o
 
 **Establishing connection and retrieving a subject number**:
 ```c#
+    // important: create access to ConnectionHandler
+    public ConectionHandler ConectionHandler; 
+
     // display connection menu: This notifies participants that the connection is being established
     ConnectionHandler.displayMenu(true); 
 
