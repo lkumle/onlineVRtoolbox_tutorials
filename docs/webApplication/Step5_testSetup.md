@@ -1,5 +1,5 @@
 ---
-title: Step 5 - Testing the set up
+title: Step 5 - Testing the setup
 layout: default
 parent: Notebook 2 – Web Application
 ---
@@ -7,7 +7,7 @@ parent: Notebook 2 – Web Application
 
 ## Finalising and testing data transfer
 
-Let's finalise the set up and test whether everything is working as expected. Here we assume that you have followed the previous steps and have a web application running on pythonanywhere.com, and that you are trying to replicate the minimal pipeline from the template project. However, this also applies to integrating the onlineVR-toolbox into your own Unity project. 
+Let's finalise the setup and test whether everything works as expected. This guide assumes that you have followed the previous steps and have a web application running on PythonAnywhere, and that you are trying to replicate the minimal pipeline from the template project. These steps also apply when integrating the onlineVR-toolbox into your own Unity project.
 
 --- 
 ### 1. Configure Unity with your web address
@@ -16,7 +16,7 @@ Let's finalise the set up and test whether everything is working as expected. He
 2. Find the line where the server address is set (see below)
 3. Replace the placeholder address with your actual server address (e.g., `https://yourusername.pythonanywhere.com`).
 
-```c#
+```csharp
 
     // ---------------------------------------------------------- //
     // CONFIGURE: 
@@ -27,9 +27,9 @@ Let's finalise the set up and test whether everything is working as expected. He
 ---
 ### 2. Run project in Unity
 
-Run the Unity project within the Editor. As a reminder, the `ExperimentHandler.cs` script runs two "blocks" of the experiment that are empty and do not do anthing, but it will call the `ConnectionHandler` upload data files at the end of each block.
+Run the Unity project within the Editor. As a reminder, the `ExperimentHandler.cs` script runs two `blocks` of the experiment that are empty and do not perform any actions, but it will call the `ConnectionHandler` to upload data files at the end of each block.
 
-If successful, the connection will be established quite quickly, meaning that you will probably not see the menu appear. If you do see the connection menu, it will disappear once the connection is established.
+If successful, the connection will be established quite quickly, and you will probably not see the menu appear. If you do see the connection menu, it will disappear once the connection is established.
 
 You should also see the following messages in the console:
 
@@ -37,29 +37,29 @@ You should also see the following messages in the console:
 
 
 ---
-### 3. Check if data has arrived on PythonAnywhere server
+### 3. Check whether data has arrived on the PythonAnywhere server
 
 1. Log in to your PythonAnywhere account.
-2. Navigate to the "Files" tab and then navigate to the directory where your data files are stored (e.g., `/home/yourusername/mysite/files/`).
+2. Go to the `Files` tab and open the directory where your data files are stored (for example, `/home/yourusername/mysite/files/`).
 3. You should see the uploaded data files (e.g., `onlineVR_000001_2025-05-28_18-21_B1.bytes` and `onlineVR_000001_2025-05-28_18-21_B2.bytes`) in this directory.
 
 {: .highlight}
-If the filenames do not match the expected format (e.g., something is missing or random added characters), check the `bottle_app.py` file and ensure that the filename lengths is configured correctly (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html) for details).
+If the filenames do not match the expected format (for example, if something is missing or extra characters have been added), check `bottle_app.py` and ensure that the filename length is configured correctly (see [Step 4](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/webApplication/Step4_fileNames.html) for details).
 
 ![](../../assets/images/test2.png)
 
 
 {: .new}
-> If you see the files, congratulations! 
+> If you see the files, congratulations!
 >
 > You have successfully set up the onlineVR-toolbox and replicated the minimal pipeline. To learn how to decrypt the data files, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
 
 ----
-### 4. Double check that "retrying connection"/ "no connection" works as expected
+### 4. Double-check that the `Retrying connection` / `No connection` messages work as expected
 
-To test the connection handling, you can temporarily disable your internet connection or open the `ConnectionHandler.cs` script and change the server address to something wrong.
+To test the connection handling, you can temporarily disable your internet connection or open the `ConnectionHandler.cs` script and change the server address to an incorrect value.
 
-This should trigger the connection menu to first notify you that it is retrying to connect, and then display an error message if the connection cannot be established after 3 attempts.
+This should trigger the connection menu to notify you that it is retrying to connect and then display an error message if the connection cannot be established after three attempts.
 
 ![](../../assets/images/test3.png)
 
@@ -67,6 +67,6 @@ This should trigger the connection menu to first notify you that it is retrying 
 
 ### Troubleshooting
 If you encounter any issues during the setup or testing, here are some common troubleshooting steps:
-- **Check Server Address**: Ensure that the server address in `ConnectionHandler.cs` is correct and matches your web application URL.
-- **Check PythonAnywhere Configuration**: Make sure your web application is running and configured correctly on PythonAnywhere. You can check the "Web" tab to see if the application is active. 
+- **Check the server address**: Ensure that the server address in `ConnectionHandler.cs` is correct and matches your web application URL.
+- **Check PythonAnywhere configuration**: Make sure your web application is running and configured correctly on PythonAnywhere. You can check the `Web` tab to see if the application is active.
 
