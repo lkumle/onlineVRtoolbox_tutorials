@@ -21,11 +21,13 @@ We recommend starting with the main tutorial paper for a high-level overview of 
 >
 > The materials included in these notebooks provide a minimal working pipeline that establishes communication between a Unity-based task and a web application.
 
-The resources consist of three notebooks, each covering a distinct part of the pipeline:
+The resources consist of four notebooks, each covering a distinct part of the pipeline:
 
 **Notebook 1:** Implementing data transfer functionality within Unity  
 **Notebook 2:** Setting up a web application that the Unity task can access  
-**Notebook 3:** Ensuring data security through encryption and decryption  
+**Notebook 3:** Ensuring data security through encryption and decryption 
+
+**Bonus Notebook 4:** Creating and uploading a Unity application to Steam. 
 
 Together with the materials in the onlineVR-toolbox, these notebooks guide you through replicating a complete pipeline that sends (encrypted) data from a Unity task to a web server, where it can be downloaded and decrypted.
 
