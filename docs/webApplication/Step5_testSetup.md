@@ -49,7 +49,7 @@ If the filenames do not match the expected format (e.g., something is missing or
 ![](../../assets/images/test2.png)
 
 
-{: .new -title}
+{: .new}
 > If you see the files, congratulations! 
 >
 > You have successfully set up the onlineVR-toolbox and replicated the minimal pipeline. To learn how to decrypt the data files, see [Notebook 3](https://lkumle.github.io/onlineVRtoolbox_tutorials/docs/encryption/Index.html).
