@@ -1,7 +1,7 @@
 ---
 title: Step 1 - Creating a Unity build
 layout: default
-parent: Notebook 4 – Creating and uploading a Unity application
+parent: Notebook 4 – Creating and uploading a build
 ---
 
 # Creating a Unity build
