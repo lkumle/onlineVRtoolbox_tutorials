@@ -21,12 +21,16 @@ Navigating the Steam ecosystem involves three components, each serving a differe
 - **3. Steam SDK (In-Game Integration + Tools Bundle)**:  
   The Steam SDK is a software development kit that allows developers to integrate Steam-specific features into their game. Importantly, the SDK download also includes Steamworks tools (e.g.,SteamPipeGUI) which simplify tasks like uploading builds.
 
+![](../../assets/images/SteamEco.png)
+
+
 {: .highlight}
 **Integrating the Steam SDK into your Unity build is *not* required in order to upload the application to Steam.**  
 SDK integration is only necessary if we want to use Steam-specific runtime features (e.g., authentication, achievements, or cloud saves), which we do not expect to need for remote VR studies.  
 We *do* need to download the Steam SDK because it includes the Steamworks upload tools (like SteamPipeGUI), but using these tools does *not* require integrating any Steam SDK code into the Unity project.
 
-![](../../assets/images/SteamEco.png)
+---
+---
 
 ### Getting Started
 
@@ -57,6 +61,7 @@ Thus, setting up the Store Page mainly serves two purposes:
 1. **Complying with Steam’s requirements** so that the game/task can be published.  
 2. **Providing accurate information** to both participants and the general public (given that Store Pages are publicly visible).  
 
+**Resources for setting up a Store Page include:**
 - Official guidance: [Steamworks Documentation — Store Presence](https://partner.steamgames.com/doc/store)  
 - Example: [Store Page of our Case Study](https://store.steampowered.com/app/2561950/Sort_It/)  
 - Step-by-step video tutorial: [Creating a Steam Page](https://www.youtube.com/watch?v=Vwb1HV8KTx8)
