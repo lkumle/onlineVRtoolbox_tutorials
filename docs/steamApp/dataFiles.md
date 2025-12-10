@@ -59,6 +59,17 @@ For saving data, Unity provides "Application.persistentDataPath" (also see Noteb
 
 ```
 
+## A note on VR frameworks: 
+
+There are multiple frameworks and associated SDKs (Software Development Kits) available for developing VR applications in Unity, including SteamVR (in older Editor versions) or Unity's XR Plugin framework with OpenXR. Some of these frameworks or SDKs support multiple headsets, while others are designed for specific hardware. 
+
+Unity’s current VR ecosystem is built around the XR Plug-in Management system and OpenXR, which has become the industry-standard multi-platform API for VR development. OpenXR provides broad compatibility across most major PC VR headsets and is the recommended starting point for new Unity VR projects.
+
+If your experiment is intended for Steam distribution, most Steam-compatible headsets (e.g., Valve Index, HTC Vive, Oculus/Meta devices in SteamVR mode, Pimax, and others) are fully supported through SteamVR’s OpenXR runtime. This means you can typically develop using **Unity’s OpenXR Plugin** and still publish on Steam without needing the older SteamVR (OpenVR)Unity Plugin.
+
+The SteamVR Unity Plugin (OpenVR) is still available, but it is considered a legacy or optional integration and may require extra compatibility testing on recent Unity versions.
+
+As VR best practices and SDK support continue to evolve, we recommend confirming Unity’s latest OpenXR guidance and Valve’s current SteamVR recommendations before choosing your final framework.
 
 ## Creating the build
 
