@@ -23,7 +23,7 @@ Let's explore how you can integrate this functionality into your own Unity task.
 
 1. In your Unity project, open the scene where you want to integrate the onlineVR-toolbox functionality.
 2. In the `Project` window, navigate to the `onlineVR` package folder (path in Editor: `Packages/onlineVR`).
-3. Open the `/Editor` folder and locate the `ConnectionMenu` prefab. This prefab contains the UI elements for the connection menu and is already set up with the necessary scripts.
+3. Open the `/Runtime` folder and locate the `ConnectionMenu` prefab. This prefab contains the UI elements for the connection menu and is already set up with the necessary scripts.
 4. Drag and drop the `ConnectionMenu` prefab into your scene hierarchy.
 
 ---
@@ -36,7 +36,7 @@ This typically involves two main steps: establishing a connection at the start o
 **Establishing connection and retrieving a subject number**:
 ```c#
     // important: create access to ConnectionHandler
-    public ConectionHandler ConectionHandler; 
+    public ConectionHandler ConectionHandler; // ensure to drag the ConnectionMenu prefab into this field in the Inspector
 
     // display connection menu: This notifies participants that the connection is being established
     ConnectionHandler.displayMenu(true); 

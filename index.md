@@ -44,8 +44,8 @@ We recommend working through the notebooks and replicating the example pipeline 
 
 To replicate the pipeline locally, you’ll need:
 
-- Unity (Editor version: **2022.3.59f1**)  
-- Jupyter Notebooks (or any Python environment)
+- Unity (Editor version: **6000.3**)  
+- Jupyter Notebooks (or any other Python environment)
 
 This tutorial assumes basic familiarity with Unity, C#, and Python. However, **no coding is required** to replicate the core functionality—we provide pre-implemented code for all steps and guide you through how to configure it.
 
